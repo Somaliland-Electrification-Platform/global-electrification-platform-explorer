@@ -1,8 +1,8 @@
 'use strict';
 
 export default {
-  appTitle: 'Global Electrification Platform',
-  appShortTitle: 'GEP',
+  appTitle: 'Benin Electrification Programme',
+  appShortTitle: 'BEP',
   appDescription:
     'Explore least cost electrification strategies around the world.',
   baseUrl: 'http://localhost:9000',

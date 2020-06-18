@@ -70,6 +70,7 @@
 
 .stats-list {
   display: flex;
+  color: rgba(0,0,0,0) !important;
   flex-flow: row nowrap;
   align-items: flex-end;
   font-weight: $base-font-medium;
@@ -106,7 +107,7 @@
   }
 
   dd {
-    color: $secondary-color;
+    color: rgba(0,0,0,0) !important;
     font-size: 2rem;
     line-height: 1;
     margin-right: $global-spacing / 2;

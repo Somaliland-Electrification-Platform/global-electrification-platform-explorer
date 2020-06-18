@@ -36,27 +36,27 @@ export default class NavGlobalMenu extends Component {
             <span>Explore</span>
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to='/relevant'
-            title='Relevant links and tools'
-            activeClassName='global-menu__link--active'
-            className='global-menu__link global-menu__link--default'
-          >
-            <span>Relevant tools</span>
-          </NavLink>
-        </li>
-        <li>
-          <a
-            href='https://gep-user-guide.readthedocs.io'
-            target='_blank'
-            title='Visit the documentation'
-            rel='noreferrer noopener'
-            className='global-menu__link global-menu__link--docs'
-          >
-            <span>Documentation</span>
-          </a>
-        </li>
+        {/*<li>*/}
+          {/*<NavLink*/}
+            {/*to='/relevant'*/}
+            {/*title='Relevant links and tools'*/}
+            {/*activeClassName='global-menu__link--active'*/}
+            {/*className='global-menu__link global-menu__link--default'*/}
+          {/*>*/}
+            {/*<span>Relevant tools</span>*/}
+          {/*</NavLink>*/}
+        {/*</li>*/}
+        {/*<li>*/}
+          {/*<a*/}
+            {/*href='https://gep-user-guide.readthedocs.io'*/}
+            {/*target='_blank'*/}
+            {/*title='Visit the documentation'*/}
+            {/*rel='noreferrer noopener'*/}
+            {/*className='global-menu__link global-menu__link--docs'*/}
+          {/*>*/}
+            {/*<span>Documentation</span>*/}
+          {/*</a>*/}
+        {/*</li>*/}
         <li>
           <NavLink
             to='/about'
