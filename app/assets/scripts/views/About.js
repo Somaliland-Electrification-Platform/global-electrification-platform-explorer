@@ -23,13 +23,13 @@ class About extends Component {
               <ul>
                 <li>
                   <b>Kartoza :</b> Tim Sutton –{' '}
-                  <a href='tim@kartoza.com'>
+                  <a href='mailto:tim@kartoza.com'>
                     tim@kartoza.com
                   </a>
                 </li>
                 <li>
                   <b>KTH Energy Systems:</b> Babak Khavari –{' '}
-                  <a href='khavari@kth.se'>
+                  <a href='mailto:khavari@kth.se'>
                     khavari@kth.se
                   </a>
                 </li>
@@ -48,6 +48,20 @@ class About extends Component {
                       src='/assets/graphics/content/logos/logo-wbg.png'
                     />
                     <span>KTH</span>
+                  </a>
+                </dd>
+                <dd>
+                  <a
+                    href='https://www.esmap.org/'
+                    title='Visit Energy Sector Management Assistance Program'
+                    className='logo-esmap'
+                    target='_blank'
+                  >
+                    <img
+                      alt='ESMAP Logo'
+                      src='/assets/graphics/content/logos/logo-esmap.png'
+                    />
+                    <span>ESMAP</span>
                   </a>
                 </dd>
                 <dd>

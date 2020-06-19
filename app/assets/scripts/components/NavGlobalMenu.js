@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import ShareOptions from './connected/Share';
 
-import { environment } from '../config';
+import { environment, geonodeUrl } from '../config';
 
 const isExplorerActive = (match, location) => {
   return location.pathname.match(/^\/(explore|countries)/g);
@@ -36,27 +36,6 @@ export default class NavGlobalMenu extends Component {
             <span>Explore</span>
           </NavLink>
         </li>
-        {/*<li>*/}
-          {/*<NavLink*/}
-            {/*to='/relevant'*/}
-            {/*title='Relevant links and tools'*/}
-            {/*activeClassName='global-menu__link--active'*/}
-            {/*className='global-menu__link global-menu__link--default'*/}
-          {/*>*/}
-            {/*<span>Relevant tools</span>*/}
-          {/*</NavLink>*/}
-        {/*</li>*/}
-        {/*<li>*/}
-          {/*<a*/}
-            {/*href='https://gep-user-guide.readthedocs.io'*/}
-            {/*target='_blank'*/}
-            {/*title='Visit the documentation'*/}
-            {/*rel='noreferrer noopener'*/}
-            {/*className='global-menu__link global-menu__link--docs'*/}
-          {/*>*/}
-            {/*<span>Documentation</span>*/}
-          {/*</a>*/}
-        {/*</li>*/}
         <li>
           <NavLink
             to='/about'
@@ -66,6 +45,15 @@ export default class NavGlobalMenu extends Component {
           >
             <span>About</span>
           </NavLink>
+        </li>
+        <li>
+          <a
+            href={geonodeUrl}
+            title='SDI'
+            className='global-menu__link'
+          >
+            SDI
+          </a>
         </li>
         <li>
           <ShareOptions />
