@@ -2,6 +2,6 @@
 
 export default {
   environment: 'production',
-  siteUrl: 'https://electrifynow.energydata.info',
-  dataServiceUrl: 'https://gep-api.energydata.info'
+  baseUrl: 'http://localhost:9000',
+  dataServiceUrl: 'http://localhost:3000'
 };

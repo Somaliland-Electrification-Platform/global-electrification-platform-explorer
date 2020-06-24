@@ -1,0 +1,34 @@
+[
+  {
+    "description": "Healthsites from geoserver.",
+    "id": "healthsites-geoserver",
+    "label": "Healthsites from geoserver",
+    "source": {
+      "label": "openstreetmap",
+      "url": "https://www.openstreetmap.org/"
+    },
+    "type": "raster",
+    "tiles": [
+      "http://benin.gep.kartoza.com/geoserver/gwc/service/wmts?layer=geonode%3Aosm_healthcare_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
+    ],
+    "vectorLayers": [
+      "data_layer"
+    ]
+  },
+  {
+    "description": "School from geoserver.",
+    "id": "school-geoserver",
+    "label": "School from geoserver",
+    "source": {
+      "label": "openstreetmap",
+      "url": "https://www.openstreetmap.org/"
+    },
+    "type": "raster",
+    "tiles": [
+      "http://benin.gep.kartoza.com/geoserver/gwc/service/wmts?layer=geonode%3Aosm_school_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
+    ],
+    "vectorLayers": [
+      "data_layer"
+    ]
+  }
+]

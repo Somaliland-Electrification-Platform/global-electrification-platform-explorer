@@ -2,6 +2,7 @@ import qs from 'qs';
 
 import { fetchDispatchCacheFactory, fetchDispatchFactory } from './utils';
 import { dataServiceUrl } from '../config';
+import * as externalLayers   from './ExternalLayers';
 
 /*
  * Actions for Models
@@ -20,6 +21,8 @@ export function requestModel (modelId) {
 }
 
 export function receiveModel (modelId, data, error = null) {
+  data.map.externalLayers = data.map.externalLayers.concat(
+      externalLayers['default'])
   return {
     type: RECEIVE_MODEL,
     id: modelId,
