@@ -13,12 +13,13 @@ import {
   showGlobalLoading,
   hideGlobalLoading
 } from '../components/GlobalLoading';
+import {getBaseUrl} from "../app";
 
 const CountryCard = ({ iso, name }) => {
   return (
     <article className='card card--sumary card--country'>
       <Link
-        to={`/countries/${iso}/models`}
+        to={`${getBaseUrl()}/countries/${iso}/models`}
         className='card__contents'
         title={`Select ${name}`}
       >
@@ -64,7 +65,7 @@ class SelectCountry extends Component {
 
     if (countries.length === 1) {
       const country = countries[0];
-      return <Redirect push to={`/countries/${country.id}/models`} />;
+      return <Redirect push to={`${getBaseUrl()}/countries/${country.id}/models`} />;
     }
 
     return (

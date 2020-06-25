@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Trans } from 'react-i18next';
 
 import App from './App';
+import i18n from "i18next";
 
 class About extends Component {
   render () {
@@ -17,8 +19,8 @@ class About extends Component {
           <div className='inpage__body'>
             <div className='prose'>
               <p>
-                For any inquiries and potential collaboration please contact the
-                development team:
+                <Trans>For any inquiries and potential collaboration please contact the
+                  development team</Trans>:
               </p>
               <ul>
                 <li>
@@ -40,7 +42,7 @@ class About extends Component {
                 <dd>
                   <a
                     href='https://www.worldbank.org/'
-                    title='Visit World Bank'
+                    title={i18n.t('Visit')+' World Bank'}
                     target='_blank'
                   >
                     <img
@@ -53,7 +55,7 @@ class About extends Component {
                 <dd>
                   <a
                     href='https://www.esmap.org/'
-                    title='Visit Energy Sector Management Assistance Program'
+                    title={i18n.t('Visit')+' Energy Sector Management Assistance Program'}
                     className='logo-esmap'
                     target='_blank'
                   >
@@ -67,7 +69,7 @@ class About extends Component {
                 <dd>
                   <a
                     href='https://www.kth.se/en'
-                    title='Visit KTH'
+                    title={i18n.t('Visit')+' KTH'}
                     target='_blank'
                   >
                     <img
@@ -80,7 +82,7 @@ class About extends Component {
                 <dd>
                   <a
                     href='https://kartoza.com/'
-                    title='Visit Katoza'
+                    title={i18n.t('Visit')+' Katoza'}
                     target='_blank'
                   >
                     <img
@@ -93,7 +95,7 @@ class About extends Component {
                 <dd>
                   <a
                     href='https://snv.org/'
-                    title='Visit SVN'
+                    title={i18n.t('Visit')+' SVN'}
                     target='_blank'
                   >
                     <img

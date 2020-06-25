@@ -24,6 +24,10 @@ import {
 } from '../components/GlobalLoading';
 import { getCountryBoundsNWSE } from '../utils/ne-110m_bbox';
 
+import {Trans} from "react-i18next";
+import {getBaseUrl} from "../app";
+import i18n from "i18next";
+
 class Explore extends Component {
   constructor (props) {
     super(props);
@@ -343,15 +347,15 @@ class Explore extends Component {
                   </h1>
                   {hasMultipleModels ? <p className='inpage__subtitle'>{model.name}</p> : null}
                   <dl className='inpage__details'>
-                    <dt>Rise score</dt>
+                    <dt><Trans>Rise score</Trans></dt>
                     <dd>{riseScore}</dd>
                   </dl>
                 </div>
                 <div className='inpage__hactions'>
                   <Link
-                    to={hasMultipleModels ? `/countries/${model.country}/models` : `/countries`}
+                    to={hasMultipleModels ? `${getBaseUrl()}/countries/${model.country}/models` : `${getBaseUrl()}/countries`}
                     className='exp-change-button'
-                    title={hasMultipleModels ? 'Change model' : 'Change country'}
+                    title={hasMultipleModels ? i18n.t('Change model') : i18n.t('Change country')}
                   >
                     <span>Change</span>
                   </Link>

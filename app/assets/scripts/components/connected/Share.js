@@ -3,6 +3,7 @@ import React from 'react';
 import { PropTypes as T } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import Clipboard from 'clipboard';
+import i18n from "i18next";
 
 import { environment } from '../../config';
 
@@ -39,7 +40,7 @@ class ShareOptions extends React.Component {
             triggerClassName='global-menu__link global-menu__link--share'
             triggerActiveClassName='button--active'
             triggerText='Share'
-            triggerTitle='Toggle share options'
+            triggerTitle={i18n.t('Toggle share options')}
             direction={largeUp ? 'up' : 'down'}
             alignment={largeUp ? 'left' : 'right'}
           >
@@ -49,7 +50,7 @@ class ShareOptions extends React.Component {
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
                   className='drop__menu-item share-facebook'
-                  title='Share on Facebook'
+                  title={i18n.t('Share on') + ' Facebook'}
                   target='_blank'
                 >
                   <span>Facebook</span>
@@ -59,7 +60,7 @@ class ShareOptions extends React.Component {
                 <a
                   href={`https://twitter.com/intent/tweet?url=${url}`}
                   className='drop__menu-item share-twitter'
-                  title='Share on Twitter'
+                  title={i18n.t('Share on')+' Twitter'}
                   target='_blank'
                 >
                   <span>Twitter</span>

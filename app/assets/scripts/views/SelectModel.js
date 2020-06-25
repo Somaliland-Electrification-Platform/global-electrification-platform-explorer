@@ -15,6 +15,8 @@ import {
   hideGlobalLoading
 } from '../components/GlobalLoading';
 
+import {getBaseUrl} from "../app";
+
 class SelectModel extends Component {
   async componentDidMount () {
     showGlobalLoading();
@@ -42,7 +44,7 @@ class SelectModel extends Component {
 
     if (models.length === 1) {
       const model = models[0];
-      return <Redirect push to={`/explore/${model.id}`} />;
+      return <Redirect push to={`${getBaseUrl()}/explore/${model.id}`} />;
     }
 
     return (
@@ -51,7 +53,7 @@ class SelectModel extends Component {
           <li key={m.id} className='model-list__item'>
             <article className='card card--sumary card--model'>
               <Link
-                to={`/explore/${m.id}`}
+                to={`${getBaseUrl()}/explore/${m.id}`}
                 className='card__contents'
                 title={`Select ${name}`}
               >
@@ -101,10 +103,10 @@ class SelectModel extends Component {
               </div>
               <div className='inpage__hactions'>
                 <Link
-                  to='/countries'
+                  to={`${getBaseUrl()}/countries`}
                   className='exp-change-button'
                   title='Change country'
-                >
+                >exp-change-button
                   <span>Change</span>
                 </Link>
               </div>

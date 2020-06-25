@@ -3,8 +3,12 @@ import { PropTypes as T } from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 import ShareOptions from './connected/Share';
+import LanguageOptions from './LanguageOptions';
 
 import { environment, geonodeUrl } from '../config';
+
+import i18n from "i18next";
+import {getBaseUrl} from "../app";
 
 const isExplorerActive = (match, location) => {
   return location.pathname.match(/^\/(explore|countries)/g);
@@ -17,8 +21,8 @@ export default class NavGlobalMenu extends Component {
         <li>
           <NavLink
             exact
-            to='/'
-            title='Visit the home page'
+            to={getBaseUrl()}
+            title={i18n.t('Visit the home page')}
             activeClassName='global-menu__link--active'
             className='global-menu__link global-menu__link--home'
           >
@@ -27,9 +31,9 @@ export default class NavGlobalMenu extends Component {
         </li>
         <li>
           <NavLink
-            to='/countries'
+            to={`${getBaseUrl()}/countries`}
             isActive={isExplorerActive}
-            title='Explore scenarios'
+            title={i18n.t('Explore scenarios')}
             activeClassName='global-menu__link--active'
             className='global-menu__link global-menu__link--explore'
           >
@@ -38,8 +42,8 @@ export default class NavGlobalMenu extends Component {
         </li>
         <li>
           <NavLink
-            to='/about'
-            title='Learn about this platform'
+            to={`${getBaseUrl()}/about`}
+            title={i18n.t('Learn about this platform')}
             activeClassName='global-menu__link--active'
             className='global-menu__link global-menu__link--about'
           >
@@ -54,6 +58,9 @@ export default class NavGlobalMenu extends Component {
           >
             SDI
           </a>
+        </li>
+        <li>
+          <LanguageOptions />
         </li>
         <li>
           <ShareOptions />

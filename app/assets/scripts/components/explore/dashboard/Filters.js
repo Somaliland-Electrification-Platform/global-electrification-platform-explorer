@@ -8,6 +8,8 @@ import { environment } from '../../../config';
 
 import ShadowScrollbars from '../../ShadowScrollbar';
 
+import {translate} from "../../../app";
+
 class Filters extends Component {
   constructor (props) {
     super(props);
@@ -22,7 +24,8 @@ class Filters extends Component {
   renderRangeFilter (filter, filterIdx) {
     const filterState = this.props.filtersState[filterIdx];
     const { min, max } = filter.range;
-
+    filter.description = translate(filter.description)
+    filter.label = translate(filter.label)
     return (
       <div className='form__group econtrols__item' key={`${filter.id}`}>
         <div className='form__inner-header'>
@@ -87,6 +90,8 @@ class Filters extends Component {
 
   renderOptionsFilter (filter, filterIdx) {
     const filterState = this.props.filtersState[filterIdx];
+    filter.description = translate(filter.description)
+    filter.label = translate(filter.label)
 
     return (
       <div className='form__group econtrols__item' key={`${filter.id}`}>
@@ -110,6 +115,8 @@ class Filters extends Component {
         </div>
         {filter.options &&
           filter.options.map(option => {
+            option.label = translate(option.label)
+
             return (
               <label
                 key={option.id}

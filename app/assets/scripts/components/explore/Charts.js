@@ -11,19 +11,20 @@ import { environment } from '../../config';
 import { formatKeyIndicator } from '../../utils';
 
 import Modal from '../Modal';
+import i18n from "i18next";
 
 /**
  * Labels and formatter for Key Indicators
  */
 const indicatorsLabels = {
   investmentCost: {
-    label: 'Investment Required',
+    label: 'Investment required',
     format: n => {
       return `$${formatKeyIndicator(n, 'metric')}`;
     }
   },
   newCapacity: {
-    label: 'Added Capacity',
+    label: 'Added capacity',
     format: n => {
       return `${formatKeyIndicator(n, 'power')}`;
     }
@@ -184,7 +185,7 @@ class Charts extends Component {
           <div className='popover__contents'>
             <header className='popover__header'>
               <div className='popover__headline'>
-                <h1 className='popover__title'>Population connected</h1>
+                <h1 className='popover__title'>{i18n.t('Population connected')}</h1>
                 <p className='popover__subtitle'>
                   In {targetYear}:{' '}
                   {formatKeyIndicator(
@@ -485,7 +486,7 @@ class Charts extends Component {
         </div>
 
         <figcaption className='sum-chart-media__caption'>
-          {'Population connected'}
+          {i18n.t('Population connected')}
         </figcaption>
       </figure>
     );
@@ -494,7 +495,9 @@ class Charts extends Component {
   renderChart (keyIndicator) {
     const { summary, summaryByType } = this.props.scenario;
     const techLayers = this.props.techLayers;
-    const { label, format } = indicatorsLabels[keyIndicator];
+    let { label } = indicatorsLabels[keyIndicator];
+    label = i18n.t(label)
+    const { format } = indicatorsLabels[keyIndicator];
 
     const height = 132;
     const padding = 2;

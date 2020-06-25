@@ -6,13 +6,16 @@ import NavGlobalMenu from './NavGlobalMenu';
 
 import { environment, appTitle, appShortTitle } from '../config';
 
+import i18n from "i18next";
+import {getBaseUrl} from "../app";
+
 export default class PageHeader extends React.PureComponent {
   render () {
     return (
       <header className='page__header' role='banner'>
         <div className='page__headline'>
           <h1 className='page__title'>
-            <Link to='/' title='Visit the home page' data-ast={appShortTitle}>
+            <Link to={getBaseUrl()} title={i18n.t('Visit the home page')} data-ast={appShortTitle}>
               <span>{appTitle}</span>
             </Link>
           </h1>

@@ -5,6 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import { environment } from '../../../config';
 
 import ShadowScrollbars from '../../ShadowScrollbar';
+import {translate} from "../../../app";
 
 class Levers extends Component {
   constructor (props) {
@@ -21,6 +22,10 @@ class Levers extends Component {
     const { leversState } = this.props;
     const checkedOptionIdx = leversState[leverIdx];
 
+    // console.log(lever.description)
+    lever.label = translate(lever.label)
+    lever.description = translate(lever.description)
+
     return (
       <div className='form__group econtrols__item' key={`${lever.id}`}>
         <div className='form__inner-header'>
@@ -34,6 +39,7 @@ class Levers extends Component {
           )}
         </div>
         {lever.options.map((option, oIdx) => {
+          option.value = translate(option.value)
           return (
             <label
               key={`${lever.id}-${oIdx}`}

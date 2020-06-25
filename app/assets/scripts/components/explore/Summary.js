@@ -9,6 +9,8 @@ import downloadPDF from './Download';
 import Legend from './Legend';
 import Dropdown from '../Dropdown';
 
+import i18n from "i18next";
+
 class Summary extends Component {
   /**
    * Check if scenario has data and render panel accordingly
@@ -42,10 +44,9 @@ class Summary extends Component {
         return (
           <Fragment>
             <div className='sum-block sum-block--message'>
-              <h2 className='sum-block__title'>Scenario not found</h2>
+              <h2 className='sum-block__title'>{i18n.t('Scenario not found')}</h2>
               <p>
-                No data is available for this scenario. Please choose a
-                different set of levers.
+                {i18n.t('No data is available for this scenario. Please choose a different set of levers.')}
               </p>
             </div>
           </Fragment>
@@ -55,16 +56,16 @@ class Summary extends Component {
       return hasError() ? (
         <Fragment>
           <div className='sum-block sum-block--message sum-block--error'>
-            <h2>Error</h2>
-            <p>An error occurred getting the data.</p>
-            <p>Please try again.</p>
+            <h2>{i18n.t('Error')}</h2>
+            <p>{i18n.t('An error occurred getting the data.')}</p>
+            <p>{i18n.t('Please try again.')}</p>
           </div>
         </Fragment>
       ) : (
         <Fragment>
           <div className='sum-block sum-block--message'>
             <h2 className='sum-block__title'>Loading</h2>
-            <p>Fetching data for scenario...</p>
+            <p>{i18n.t('Fetching data for scenario...')}</p>
           </div>
         </Fragment>
       );
@@ -78,9 +79,9 @@ class Summary extends Component {
       <section className='exp-summary'>
         <header className='exp-summary__header'>
           <div className='exp-summary__headline'>
-            <h1 className='exp-summary__title'>Summary</h1>
+            <h1 className='exp-summary__title'>{i18n.t('Summary')}</h1>
             <p className='exp-summary__subtitle'>
-              Results for {this.props.appliedState.year}
+              {i18n.t('Results for')} {this.props.appliedState.year}
             </p>
             {model.disclaimer &&
               <p className='exp-summary__disclaimer'>
@@ -98,8 +99,8 @@ class Summary extends Component {
           <Dropdown
             triggerClassName='exp-download-button'
             triggerActiveClassName='button--active'
-            triggerText='Download'
-            triggerTitle='Download the data'
+            triggerText={i18n.t('Download')}
+            triggerTitle={i18n.t('Download the data')}
             direction='up'
             alignment='center'
           >
@@ -114,7 +115,7 @@ class Summary extends Component {
                     downloadPDF(this.props);
                   }}
                 >
-                  PDF Report
+                  {i18n.t('PDF Report')}
                 </a>
               </li>
               {model.sourceData &&
@@ -127,7 +128,7 @@ class Summary extends Component {
                     className='drop__menu-item drop__menu-item--data'
                     data-hook='dropdown:close'
                   >
-                      Source Data
+                      {i18n.t('Source Data')}
                   </a>
                 </li>
               )}

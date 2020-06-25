@@ -5,10 +5,14 @@ import { PropTypes as T } from 'prop-types';
 
 import { wrapApiResult } from '../redux/utils';
 import { fetchStats } from '../redux/actions';
-import { environment, appTitle } from '../config';
+import { environment, appTitle, country } from '../config';
 import { padNumber } from '../utils';
 
 import App from './App';
+
+import i18n from "i18next";
+import { Trans } from 'react-i18next';
+import {getBaseUrl} from "../app";
 
 class Home extends Component {
   componentDidMount () {
@@ -38,10 +42,8 @@ class Home extends Component {
 
     return (
       <dl className='stats-list'>
-        <dt>{totals.models > 1 ? 'Models' : 'Model'}</dt>
-        <dd>{totals.models}</dd>
-        <dt>{totals.countries > 1 ? 'Countries' : 'Country'}</dt>
-        <dd>{totals.countries}</dd>
+        <br/>
+        <br/>
       </dl>
     );
   }
@@ -60,13 +62,14 @@ class Home extends Component {
           <div className='inpage__body'>
             <section className='home-intro prose'>
               <h2 className='home-intro__title'>
-                <span>Welcome to the</span> {appTitle}
+                <Trans>Welcome to the</Trans> {appTitle}
               </h2>
               <div className='home-intro__lead'>
                 <p>
-                  Explore least-cost electrification scenarios in Benin,
-                  interacting with Benin contextual data and different
-                  investment scenarios.
+                  <Trans
+                    i18nKey="HomepageDescription"
+                    values={{ country: country}}>
+                  </Trans>
                 </p>
               </div>
 
@@ -74,19 +77,19 @@ class Home extends Component {
 
               <p className='cta-wrapper'>
                 <Link
-                  to='/countries'
-                  title='Explore the data'
+                  to={`${getBaseUrl()}/countries`}
+                  title={i18n.t('Explore the data')}
                   className='ctab ctab--explore'
                 >
-                  <span>Start exploring</span>
+                  <span><Trans>Start exploring</Trans></span>
                 </Link>
                 <small>or</small>
                 <Link
-                  to='/about'
-                  title='Learn about the tool'
+                  to={`${getBaseUrl()}/about`}
+                  title={i18n.t('Learn about this platform')}
                   className='ctab ctab--about'
                 >
-                  <span>Learn more</span>
+                  <span><Trans>Learn more</Trans></span>
                 </Link>
               </p>
 

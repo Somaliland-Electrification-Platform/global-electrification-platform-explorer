@@ -6,6 +6,7 @@ import kebabCase from 'lodash.kebabcase';
 
 import config from '../../config';
 import { formatThousands, round } from '../../utils';
+import i18n from "i18next";
 
 // fetch fonts & images on init for use in PDF
 let baseFont, boldFont, Logo;
@@ -233,7 +234,7 @@ export function downloadPDF (props) {
     .font(baseFont)
     .fontSize(8)
     .text(
-      config.appDescription,
+      i18n.t("AppDescription", { country: country.data.name}),
       options.pageWidth - options.colWidthTwoCol - options.margin,
       options.margin + 16,
       {
@@ -273,7 +274,7 @@ export function downloadPDF (props) {
 
   // Year header
   drawSectionHeader(
-    'Year',
+    i18n.t('Year'),
     legendLeft,
     options.headerHeight + 20,
     doc,
@@ -290,7 +291,7 @@ export function downloadPDF (props) {
 
   // Legend header
   const legendTop = options.headerHeight + 20 + 36 + 36;
-  drawSectionHeader('Technologies', legendLeft, legendTop, doc, options);
+  drawSectionHeader(i18n.t('Technologies'), legendLeft, legendTop, doc, options);
 
   // Legend
   const layerKeys = Object.keys(scenarioData.layers);
@@ -317,7 +318,7 @@ export function downloadPDF (props) {
   // Results summary has a 3 column layout
   const outputs = [
     {
-      name: 'Population connected',
+      name: i18n.t('Population connected'),
       // This approach should be updated in the future when the backend
       // returns the time step year in key name, instead of "intermediate"
       // and "final" years.
@@ -327,8 +328,8 @@ export function downloadPDF (props) {
           ? 'popConnectedIntermediateYear'
           : 'popConnectedFinalYear'
     },
-    { name: 'Investment required ', id: 'investmentCost' },
-    { name: 'Added capacity', id: 'newCapacity' }
+    { name:  i18n.t('Investment required'), id: 'investmentCost' },
+    { name:  i18n.t('Added capacity'), id: 'newCapacity' }
   ];
 
   // Result headers
@@ -399,7 +400,7 @@ export function downloadPDF (props) {
 
   // Scenario header - left column
   drawSectionHeader(
-    'Scenarios',
+    i18n.t('Scenarios'),
     options.margin,
     options.headerHeight + 20,
     doc,
@@ -407,7 +408,7 @@ export function downloadPDF (props) {
   );
 
   const scenarioDescription =
-    'The model determined the least cost electrification option for each area based on the following assumptions.';
+    i18n.t('The model determined the least cost electrification option for each area based on the following assumptions.');
   drawSectionDescription(
     scenarioDescription,
     options.margin,
@@ -438,7 +439,7 @@ export function downloadPDF (props) {
     options.margin + options.colWidthTwoCol + options.gutterTwoCol;
 
   drawSectionHeader(
-    'Filters',
+    i18n.t('Filters'),
     filterLeft,
     options.headerHeight + 20,
     doc,
@@ -446,7 +447,7 @@ export function downloadPDF (props) {
   );
 
   const filterDescription =
-    'The model results were further narrowed down using the following filters.';
+    i18n.t('The model results were further narrowed down using the following filters.')+'.';
   drawSectionDescription(
     filterDescription,
     filterLeft,

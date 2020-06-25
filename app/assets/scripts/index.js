@@ -1,39 +1,31 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Redirect, Router, Route, Switch } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {Router, Route, Switch} from 'react-router-dom';
 
-import config from './config';
-
-// Views
-import Home from './views/Home';
-import Explore from './views/Explore';
-import About from './views/About';
-import Relevant from './views/Relevant';
-import SelectCountry from './views/SelectCountry';
-import SelectModel from './views/SelectModel';
-import UhOh from './views/UhOh';
+import App from './app';
+import config, {subUrl} from './config';
 
 // Store
-import { store, history } from './store';
+import {store, history} from './store';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={history}>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Redirect exact from='/explore' to='/countries' />
-        <Route exact path='/countries' component={SelectCountry} />
-        <Route exact path='/countries/:countryId/models' component={SelectModel} />
-        <Route exact path='/explore/:modelId' component={Explore} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/relevant' component={Relevant} />
-        <Route path='*' component={UhOh} />
-      </Switch>
-    </Router>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <Router history={history}>
+            {
+                subUrl ?
+                    <Switch>
+                        <Route path={'/gep/:lang?'} component={App}/>
+                        <Route path={'/gep'} component={App}/>
+                        <Route path={'*'} component={App}/>
+                    </Switch>
+                    : <Route path='/:lang?' component={App}/>
+            }
+
+        </Router>
+    </Provider>,
+    document.getElementById('root')
 );
 
 /* eslint-disable no-console */

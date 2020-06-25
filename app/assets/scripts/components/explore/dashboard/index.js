@@ -9,6 +9,8 @@ import Dropdown from '../../Dropdown';
 
 import { environment } from '../../../config';
 
+import i18n from "i18next";
+
 class Dashboard extends Component {
   constructor (props) {
     super(props);
@@ -28,19 +30,19 @@ class Dashboard extends Component {
   renderTabs () {
     const self = this;
     const { activeTab } = this.state;
-    return ['scenarios', 'filters'].map((tab, index) => {
+    return ['Scenarios', 'Filters'].map((tab, index) => {
       return (
         <li className='nav__tab' role='presentation' key={index}>
           <a
             className={`nav__link ${
-              activeTab === tab ? 'nav__link--active' : ''
+              activeTab === tab.toLowerCase() ? 'nav__link--active' : ''
             }`}
             onClick={event => {
               event.preventDefault();
-              self.setState({ activeTab: tab });
+              self.setState({ activeTab: tab.toLowerCase() });
             }}
           >
-            <span>{tab}</span>
+              <span>{i18n.t(tab)}</span>
           </a>
         </li>
       );
@@ -147,13 +149,13 @@ class Dashboard extends Component {
         <button
           type='submit'
           className='econtrols__submit'
-          title='Apply'
+          title={i18n.t('Apply')}
           onClick={e => {
             e.preventDefault();
             this.props.onApplyClick();
           }}
         >
-          <span>Apply</span>
+          <span>{i18n.t('Apply')}</span>
         </button>
       </div>
     );
@@ -172,13 +174,13 @@ class Dashboard extends Component {
           <button
             type='reset'
             className='econtrols__reset'
-            title='Reset'
+            title={i18n.t('Reset')}
             onClick={e => {
               e.preventDefault();
               this.props.onResetClick();
             }}
           >
-            <span>Reset</span>
+            <span>{i18n.t('Reset')}</span>
           </button>
           {this.renderApplyControls()}
         </div>
