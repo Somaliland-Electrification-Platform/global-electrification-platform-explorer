@@ -1,7 +1,7 @@
 'use strict';
 const COUNTRY= 'Benin'
 export default {
-  appTitle: 'Benin Electrification Programme',
+  appTitle: 'Benin Electrification Platform',
   appShortTitle: 'BEP',
   appDescription:
     `Explore least cost electrification strategies in ${COUNTRY}.`,

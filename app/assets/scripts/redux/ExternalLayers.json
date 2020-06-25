@@ -9,7 +9,7 @@
     },
     "type": "raster",
     "tiles": [
-      "http://benin.gep.kartoza.com/geoserver/gwc/service/wmts?layer=geonode%3Aosm_healthcare_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
+      "/geoserver/gwc/service/wmts?layer=geonode%3Aosm_healthcare_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
     ],
     "vectorLayers": [
       "data_layer"
@@ -25,7 +25,7 @@
     },
     "type": "raster",
     "tiles": [
-      "http://benin.gep.kartoza.com/geoserver/gwc/service/wmts?layer=geonode%3Aosm_school_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
+      "/geoserver/gwc/service/wmts?layer=geonode%3Aosm_school_node&style=&tilematrixset=EPSG%3A3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A3857%3A{z}&TileCol={x}&TileRow={y}"
     ],
     "vectorLayers": [
       "data_layer"
