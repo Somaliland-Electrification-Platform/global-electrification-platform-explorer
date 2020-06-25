@@ -15,12 +15,14 @@ import UhOh from './views/UhOh';
 // translation files
 import en from "./../translations/en.json";
 import id from "./../translations/id.json";
+import fr from "./../translations/fr.json";
 
 import {subUrl} from './config';
 
 const resources = {
     en: {translation: en},
-    id: {translation: id}
+    id: {translation: id},
+    fr: {translation: fr}
 };
 
 /** Return base url
