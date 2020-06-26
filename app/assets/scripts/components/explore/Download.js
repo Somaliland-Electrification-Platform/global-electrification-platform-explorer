@@ -311,7 +311,7 @@ export function downloadPDF (props) {
       .fillColor(options.secondaryFontColor, 1)
       .font(baseFont)
       .fontSize(8)
-      .text(prettifyString(legendItem.label), legendLeft + 12 + 4, itemTop);
+      .text(prettifyString(i18n.t(legendItem.label)), legendLeft + 12 + 4, itemTop);
   });
 
   // RESULTS SUMMARY
@@ -499,7 +499,7 @@ export function downloadPDF (props) {
       .fillColor(options.secondaryFontColor, 1)
       .fontSize(8)
       .text(
-        'No filters applied to the model results.',
+        i18n.t('No filters applied to the model results.'),
         filterLeft,
         options.headerHeight + 112 - 2
       );

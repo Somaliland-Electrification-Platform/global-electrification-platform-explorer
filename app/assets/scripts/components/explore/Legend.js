@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { PropTypes as T } from 'prop-types';
 
 import { environment } from '../../config';
+import i18n from "i18next";
 
 class Legend extends Component {
   renderColor (layerId) {
@@ -20,7 +21,7 @@ class Legend extends Component {
             {title || label}
           </span>
         </dt>
-        <dd>{label}</dd>
+        <dd>{i18n.t(label)}</dd>
       </Fragment>
     );
   }
