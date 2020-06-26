@@ -11,5 +11,5 @@ export default {
   basemapStyleLink: 'mapbox://styles/derilinx/ck3yqjovg4dpn1crwajrc9ajr',
   geonodeUrl: 'http://127.0.0.1',
   country: COUNTRY,
-  subUrl: '/gep' // please don't use end trailing slash, example: /gep
+  subUrl: '' // please don't use end trailing slash, example: /gep
 };
