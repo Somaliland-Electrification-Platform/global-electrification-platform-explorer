@@ -7,22 +7,23 @@ import {fetchCountries} from "../redux/actions";
 import {connect} from "react-redux";
 
 import i18n from "i18next";
-import {subUrl} from './../config';
-import {getBaseUrl} from "../app";
+import {languageChanged} from "../app";
 
 class LanguageOptions extends React.Component {
     constructor(props) {
         super(props);
     }
 
+    clicked(e) {
+        languageChanged(e.target.textContent)
+    }
+
     renderLanguageList() {
-        const curentUrl = window.location.href
         return Object.keys(i18n.store.data).map(key => {
-            const newUrl = curentUrl.replace(getBaseUrl(), `${subUrl}/${key}`)
             return (
                 <li key={key}>
                     <a
-                        href={newUrl}
+                        onClick={this.clicked}
                         className={
                             (i18n.language === key) ? 'visited drop__menu-item' : 'drop__menu-item'}
                     >

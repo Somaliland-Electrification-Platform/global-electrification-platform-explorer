@@ -16,11 +16,10 @@ ReactDOM.render(
             {
                 subUrl ?
                     <Switch>
-                        <Route path={'/gep/:lang?'} component={App}/>
-                        <Route path={'/gep'} component={App}/>
+                        <Route path={subUrl} component={App}/>
                         <Route path={'*'} component={App}/>
                     </Switch>
-                    : <Route path='/:lang?' component={App}/>
+                    : <Route path={subUrl} component={App}/>
             }
 
         </Router>
