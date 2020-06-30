@@ -7,6 +7,7 @@ import kebabCase from 'lodash.kebabcase';
 import config from '../../config';
 import { formatThousands, round } from '../../utils';
 import i18n from "i18next";
+import {translate} from "../../app";
 
 // fetch fonts & images on init for use in PDF
 let baseFont, boldFont, Logo;
@@ -512,7 +513,7 @@ export function downloadPDF (props) {
 
   // About the model
   drawSectionHeader(
-    'About the model',
+    i18n.t('About the model'),
     options.margin,
     options.headerHeight + 20,
     doc,
@@ -524,7 +525,7 @@ export function downloadPDF (props) {
     .fontSize(10)
     .font(baseFont)
     .text(
-      `Developed by: ${model.attribution.author}`,
+      `${i18n.t('Developed by')}: ${model.attribution.author}`,
       options.margin,
       options.headerHeight + 52,
       {
@@ -538,7 +539,7 @@ export function downloadPDF (props) {
     .fontSize(10)
     .font(baseFont)
     .text(
-      `Last updated: ${model.updatedAt}`,
+      `${i18n.t('Last updated')}: ${model.updatedAt}`,
       options.margin + options.colWidthTwoCol + options.gutterTwoCol,
       options.headerHeight + 52,
       {
@@ -550,7 +551,7 @@ export function downloadPDF (props) {
     .fillColor(options.secondaryFontColor)
     .fontSize(10)
     .font(baseFont)
-    .text(model.description, options.margin, options.headerHeight + 52 + 28, {
+    .text(translate(model.description), options.margin, options.headerHeight + 52 + 28, {
       align: 'left',
       lineGap: 4
     });

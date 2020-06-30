@@ -249,7 +249,7 @@ class Explore extends Component {
   }
 
   async updateScenario () {
-    showGlobalLoading(1, 'Loading model results. This may take a while');
+    showGlobalLoading(1, i18n.t('Loading model results. This may take a while'));
     try {
       const model = this.props.model.getData();
       const { leversState: levers, filtersState: filters, year } = this.state;

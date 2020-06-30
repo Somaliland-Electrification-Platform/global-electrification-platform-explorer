@@ -56,6 +56,7 @@ export function translate(sentence) {
         return sentence
     }
 
+    sentence = sentence.replace('https://', '')
     // split with ':'
     const newSentences = sentence.split(':').map(val => {
         const cleanSentence = val.replace(/ +(?= )/g, '')

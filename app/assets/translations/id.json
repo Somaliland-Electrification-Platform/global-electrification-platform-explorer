@@ -1,6 +1,7 @@
 {
   "HomepageDescription": "Jelajahi skenario elektrifikasi berbiaya terendah di {{country}}, berinteraksi dengan data kontekstual {{country}} dan berbagai skenario investasi.",
   "AppDescription": "Jelajahi skenario elektrifikasi berbiaya terendah di {{country}}",
+  "About the model": "Tentang model ini",
   "An error occurred getting the data.": "Terjadi kesalahan saat pengambilan data.",
   "Added capacity": "Tambahan kapasitas",
   "Apply": "Terapkan",
@@ -11,8 +12,11 @@
   "Cluster's population": "Kluster populasi",
   "Cluster's area (sq.km)": "Kluster area (sq.km)",
   "Definition": "Definisi",
+  "Details": "Detail",
   "Distance from existing MV network (km)": "Jarak dari jaringan MV (km)",
   "Distance from existing road network (km)": "Jarak dari jaringan jalan (km)",
+  "Developed by":"Dikembangkan oleh",
+  "Documents": "Dokumen",
   "Download": "Unduh",
   "Electricity demand target": "Target permintaan listrik",
   "Electrification Technology": "Teknologi Listrik",
@@ -35,9 +39,13 @@
   "Intermediate investment plan": "Rencana investasi menengah",
   "Investment required": "Investasi yang dibutuhkan",
   "Investment cost per capita ($)": "Biaya investasi per kapita ($)",
+  "Last updated":"Perubahan terakhir",
   "Learn more": "Pelajari lebih dalam",
   "Learn about this platform": "Pelajari tentang platform ini",
+  "Loading": "Sedang memuat",
+  "Loading model results. This may take a while": "Memuat hasil model. Mohon ditunggu.",
   "Low PV cost (-25%)": "Biaya PV rendah (-25%)",
+  "Map Viewers": "Peta",
   "Medium population growth (2.6%)": "Pertumbuhan populasi sedang (2.6%)",
   "Mini-grid - Photovoltaic": "Jaringan kecil - Fotovoltaik",
   "Mini-grid - Wind": "Jaringan kecil - Angin",
@@ -79,5 +87,6 @@
   "Examines the role of PV system costs on electrification results. It should be noted that these costs, as used in GEP, reflect both PV module cost and Balance of System (BoS) expressed in $/kW. Expected PV cost scenario considers PV system costs as expected to vary in the modeling period. Low PV cost scenario considers PV system costs decreased by 25% compared to the expected scenario values. High PV cost scenario considers PV system costs increased by 25% compared to the expected scenario values.": "Mengkaji peran biaya sistem PV pada hasil elektrifikasi. Perlu dicatat bahwa biaya ini, seperti yang digunakan dalam GEP, mencerminkan biaya modul PV dan Balance of System (BoS) yang dinyatakan dalam $ / kW. Skenario biaya PV yang diharapkan mempertimbangkan biaya sistem PV yang diperkirakan bervariasi dalam periode pemodelan. Skenario biaya PV rendah menganggap biaya sistem PV menurun 25% dibandingkan dengan nilai skenario yang diharapkan. Skenario biaya PV tinggi mempertimbangkan biaya sistem PV meningkat 25% dibandingkan dengan nilai skenario yang diharapkan.",
   "Examines the potential of electrification rollout plans for the country. Nationwide least cost approach works as follows: First, connections are ramped up in all already grid connected settlements. Then, un-electrified settlements are prioritized based on lowest investment cost per capita until the target electrification rate is reached. Note! a generation capacity limit for the centralized grid is applied in order to keep grid expansion to sensible levels. Grid connection within 1 km presents a rollout plan that considers “forced” grid connection in all settlements located within 1km from existing MV network. Grid connection within 2 km presents a rollout plan that considers “forced” grid connection in all settlements located within 2km from existing MV network.": "Meneliti potensi rencana peluncuran elektrifikasi untuk negara ini. Pendekatan biaya terendah nasional berfungsi sebagai berikut: Pertama, koneksi ditingkatkan di semua pemukiman yang sudah terhubung jaringan. Kemudian, penyelesaian tanpa listrik diprioritaskan berdasarkan biaya investasi terendah per kapita hingga target tingkat elektrifikasi tercapai. Catatan! batas kapasitas pembangkitan untuk grid terpusat diterapkan untuk menjaga ekspansi grid ke tingkat yang masuk akal. Koneksi grid dalam 1 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 1 km dari jaringan MV yang ada. Koneksi grid dalam jarak 2 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 2 km dari jaringan MV yang ada.",
   "Examines the potential of electrification rollout plans for the country. Nationwide least cost approach works as follows": "Meneliti potensi rencana peluncuran elektrifikasi untuk negara ini. Pendekatan biaya terendah nasional berfungsi sebagai berikut",
-  "First, connections are ramped up in all already grid connected settlements. Then, un-electrified settlements are prioritized based on lowest investment cost per capita until the target electrification rate is reached. Note! a generation capacity limit for the centralized grid is applied in order to keep grid expansion to sensible levels. Grid connection within 1 km presents a rollout plan that considers “forced” grid connection in all settlements located within 1km from existing MV network. Grid connection within 2 km presents a rollout plan that considers “forced” grid connection in all settlements located within 2km from existing MV network.": "Pertama, koneksi ditingkatkan di semua pemukiman yang sudah terhubung ke jaringan. Kemudian, penyelesaian tanpa listrik diprioritaskan berdasarkan biaya investasi terendah per kapita hingga target tingkat elektrifikasi tercapai. Catatan! batas kapasitas pembangkitan untuk grid terpusat diterapkan untuk menjaga ekspansi grid ke tingkat yang masuk akal. Koneksi grid dalam 1 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 1 km dari jaringan MV yang ada. Koneksi grid dalam jarak 2 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 2 km dari jaringan MV yang ada."
+  "First, connections are ramped up in all already grid connected settlements. Then, un-electrified settlements are prioritized based on lowest investment cost per capita until the target electrification rate is reached. Note! a generation capacity limit for the centralized grid is applied in order to keep grid expansion to sensible levels. Grid connection within 1 km presents a rollout plan that considers “forced” grid connection in all settlements located within 1km from existing MV network. Grid connection within 2 km presents a rollout plan that considers “forced” grid connection in all settlements located within 2km from existing MV network.": "Pertama, koneksi ditingkatkan di semua pemukiman yang sudah terhubung ke jaringan. Kemudian, penyelesaian tanpa listrik diprioritaskan berdasarkan biaya investasi terendah per kapita hingga target tingkat elektrifikasi tercapai. Catatan! batas kapasitas pembangkitan untuk grid terpusat diterapkan untuk menjaga ekspansi grid ke tingkat yang masuk akal. Koneksi grid dalam 1 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 1 km dari jaringan MV yang ada. Koneksi grid dalam jarak 2 km menyajikan rencana peluncuran yang mempertimbangkan koneksi grid “paksa” di semua pemukiman yang berjarak 2 km dari jaringan MV yang ada.",
+  "This model is developed using the Open Source Spatial Electrification Tool (OnSSET). Full access to the source code behind this model is available at github.com/global-electrification-platform. For more information on the functionality of the model please contact the development team at KTH.":"Model ini dikembangkan dengan menggunakan Open Source Spatial Electrification Tool (OnSSET). Akses full kode tersedia di  github.com/global-electrification-platform. Untuk informasi lebih lanjut tentang fungsi dari model ini dapat menghubungi tim pengembang di KTH."
 }

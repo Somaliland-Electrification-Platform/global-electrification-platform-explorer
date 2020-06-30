@@ -7,7 +7,7 @@ import { getFromState, wrapApiResult } from '../../../redux/utils';
 import { fetchFeature } from '../../../redux/actions';
 import { store } from '../../../store';
 import { formatThousands, formatKeyIndicator } from '../../../utils';
-
+import i18n from "i18next";
 class MapPopover extends React.Component {
   componentDidMount () {
     const { scenarioId, featureId, fetchFeature, year } = this.props;
@@ -24,22 +24,22 @@ class MapPopover extends React.Component {
         <div className='popover__contents'>
           <header className='popover__header'>
             <div className='popover__headline'>
-              <h1 className='popover__title'>Details</h1>
+              <h1 className='popover__title'>{i18n.t('Details')}</h1>
             </div>
             <div className='popover__header-toolbar'><a href='#' title='Close' className='tba-xmark tba--text-hidden' onClick={onCloseClick}><span>Close</span></a></div>
           </header>
           <div className='popover__body'>
             {isReady() ? (
               <dl className='map-number-list'>
-                <dt>People connected</dt>
+                <dt>{i18n.t('Population connected')}</dt>
                 <dd>{formatThousands(data.peopleConnected, 0)}</dd>
-                <dt>Investment required</dt>
+                <dt>{i18n.t('Investment required')}</dt>
                 <dd><small>$</small> {formatThousands(data.investmentCost, 0)}</dd>
-                <dt>Capacity Added</dt>
+                <dt>{i18n.t('Added capacity')}</dt>
                 <dd>{formatKeyIndicator(data.newCapacity, 'power')}</dd>
               </dl>
             ) : (
-              <p>Loading</p>
+              <p>{i18n.t('Loading')}</p>
             )}
           </div>
         </div>
