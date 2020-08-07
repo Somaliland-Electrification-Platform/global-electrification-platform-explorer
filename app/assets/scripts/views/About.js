@@ -94,13 +94,14 @@ class About extends Component {
                 </dd>
                 <dd>
                   <a
-                    href='https://snv.org/'
-                    title={i18n.t('Visit')+' SVN'}
+                    href='http://www.recon.so/'
+                    title={i18n.t('Visit')+' Recon'}
                     target='_blank'
                   >
                     <img
                       alt='SVN Logo'
-                      src='/assets/graphics/content/logos/logo-svn.png'
+                      src='/assets/graphics/content/logos/logo-recon.png'
+                      height={'100%'}
                     />
                     <span>KTH</span>
                   </a>
