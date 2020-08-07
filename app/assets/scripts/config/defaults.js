@@ -1,5 +1,5 @@
 'use strict';
-const COUNTRY = 'Benin'
+const COUNTRY = 'Somalia'
 export default {
     appTitle: `${COUNTRY} Electrification Platform`,
     appShortTitle: `${COUNTRY[0]}EP`,

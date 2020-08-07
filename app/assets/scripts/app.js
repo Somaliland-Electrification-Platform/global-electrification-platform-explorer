@@ -22,7 +22,7 @@ import {subUrl} from './config';
 
 const resources = {
     en: {translation: en},
-    id: {translation: id},
+    // id: {translation: id},
     fr: {translation: fr}
 };
 
@@ -71,7 +71,7 @@ class App extends React.Component {
         super(props);
         const lang = getCookie('lang')
         if (!Object.keys(resources).includes(lang)) {
-            languageChanged('fr')
+            languageChanged('en')
         }
         i18n
             .use(initReactI18next) // passes i18n down to react-i18next
