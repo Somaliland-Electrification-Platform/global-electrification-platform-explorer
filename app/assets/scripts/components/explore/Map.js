@@ -198,10 +198,15 @@ class Map extends React.Component {
             );
           }
           const sourceId = `ext-${layer.id}`;
-          this.map.addSource(sourceId, {
+
+          let sourseOptions = {
             type: 'raster',
             tiles: layer.tiles
-          });
+          };
+          if (layer.tileSize) {
+            sourseOptions['tileSize'] = layer.tileSize
+          }
+          this.map.addSource(sourceId, sourseOptions);
           this.map.addLayer(
             {
               id: `${sourceId}-tiles`,
