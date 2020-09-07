@@ -2,7 +2,7 @@ import qs from 'qs';
 
 import { fetchDispatchCacheFactory, fetchDispatchFactory } from './utils';
 import { dataServiceUrl } from '../config';
-import * as externalLayers   from './ExternalLayers';
+import * as externalLayers   from '../config/externalLayers';
 
 /*
  * Actions for Models
