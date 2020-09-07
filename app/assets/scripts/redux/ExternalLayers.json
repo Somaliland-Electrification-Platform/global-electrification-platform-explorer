@@ -15,13 +15,14 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_healthcare_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:benin_healthcare_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "This dataset shows the healthsites in Benin.",
     "source": {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org"
-    }
+    },
+    "legend": "https://benin.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:benin_healthcare_sites&STYLE=benin_healthcare_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=rJ54SjXnmuE30nEfsFXd6EEHR8wUH7"
   },
   {
     "id": "schools",
@@ -29,13 +30,14 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_education_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:benin_education_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "This dataset shows the schools in Benin.",
     "source": {
       "label": "OpenStreetMap",
       "url": "https://www.openstreetmap.org"
-    }
+    },
+    "legend": "https://benin.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:benin_education_sites&STYLE=benin_education_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=rJ54SjXnmuE30nEfsFXd6EEHR8wUH7"
   },
   {
     "id": "benin_transmission_lines",
@@ -43,10 +45,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_transmission_lines_clipped&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:benin_transmission_lines_clipped&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "This dataset shows transmission lines in benin.",
-    "source": {}
+    "source": {},
+    "legend": "https://benin.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:benin_transmission_lines_clipped&STYLE=benin_transmission_lines_clipped&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=rJ54SjXnmuE30nEfsFXd6EEHR8wUH7"
   },
   {
     "id": "benin_distribution_lines",
@@ -54,10 +57,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_distribution_lines&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:benin_distribution_lines&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "This dataset shows distribution lines in benin.",
-    "source": {}
+    "source": {},
+    "legend": "https://benin.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:benin_distribution_lines&STYLE=benin_distribution_lines&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=rJ54SjXnmuE30nEfsFXd6EEHR8wUH7"
   },
   {
     "id": "benin_solar_sites",
@@ -65,9 +69,10 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_solar_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:benin_solar_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "This dataset shows PV sites in benin.",
-    "source": {}
+    "source": {},
+    "legend": "https://benin.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:benin_solar_sites&STYLE=benin_solar_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=rJ54SjXnmuE30nEfsFXd6EEHR8wUH7"
   }
 ]

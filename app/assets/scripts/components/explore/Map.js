@@ -9,6 +9,7 @@ import MapPopover from './connected/MapPopover';
 import { mapboxAccessToken, environment, basemapStyleLink } from '../../config';
 import MapboxControl from '../MapboxReactControl';
 import LayerControlDropdown from './MapLayerControl';
+import MapLayerLegend from './MapLayerLegend';
 
 mapboxgl.accessToken = mapboxAccessToken;
 
@@ -483,6 +484,7 @@ class Map extends React.Component {
   }
 
   render () {
+    const { externalLayers, layersState } = this.props;
     return (
       <section className='exp-map'>
         <h1 className='exp-map__title'>Map</h1>
@@ -493,6 +495,10 @@ class Map extends React.Component {
             <p>WebGL is not supported or disabled.</p>
           </div>
         )}
+        <MapLayerLegend
+          layersConfig={externalLayers}
+          layersState={layersState}
+        />
       </section>
     );
   }
