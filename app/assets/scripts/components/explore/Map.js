@@ -150,82 +150,12 @@ class Map extends React.Component {
 
       const mapLayersIds = techLayers.map(l => l.id);
 
-      // Add external layers.
-      // Layers come from the model. Each layer object must have:
-      // id:            Id of the layer
-      // label:         Label for display
-      // type:          (vector|raster)
-      // url:           Url to a tilejson or mapbox://. Use interchangeably with tiles
-      // tiles:         Array of tile url. Use interchangeably with url
-      // vectorLayers:  Array of source layers to show. Only in case of type vector
+      // Add external layers with basemap layerType or empty layerType
       externalLayers.forEach(layer => {
-        if (layer.type === 'vector') {
-          if (!layer.vectorLayers || !layer.vectorLayers.length) {
-            // eslint-disable-next-line no-console
-            return console.warn(
-              `Layer [${layer.label}] has missing (vectorLayers) property.`
-            );
-          }
-          if ((!layer.tiles || !layer.tiles.length) && !layer.url) {
-            // eslint-disable-next-line no-console
-            return console.warn(
-              `Layer [${layer.label}] must have (url) or (tiles) property.`
-            );
-          }
-
-          const sourceId = `ext-${layer.id}`;
-          let options = { type: 'vector' };
-
-          if (layer.tiles) {
-            options.tiles = layer.tiles;
-          } else if (layer.url) {
-            options.url = layer.url;
-          }
-
-          this.map.addSource(sourceId, options);
-          layer.vectorLayers.forEach(vt => {
-            buildLayersForSource(sourceId, vt).forEach(l => {
-              this.map.addLayer(l, labelsAndBordersLayer);
-            });
-          });
-
-          // Raster layer type.
-        } else if (layer.type === 'raster') {
-          if (!layer.tiles || !layer.tiles.length) {
-            // eslint-disable-next-line no-console
-            return console.warn(
-              `Layer [${layer.label}] must have (tiles) property.`
-            );
-          }
-          const sourceId = `ext-${layer.id}`;
-
-          let sourseOptions = {
-            type: 'raster',
-            tiles: layer.tiles
-          };
-          if (layer.tileSize) {
-            sourseOptions['tileSize'] = layer.tileSize
-          }
-          this.map.addSource(sourceId, sourseOptions);
-          this.map.addLayer(
-            {
-              id: `${sourceId}-tiles`,
-              type: 'raster',
-              source: sourceId
-            },
-            labelsAndBordersLayer
-          );
-        } else {
-          // eslint-disable-next-line no-console
-          console.warn(
-            `Layer [${
-              layer.label
-            }] has unsupported type [layer.type] and won't be added.`
-          );
+        if (!layer.layerType || layer.layerType === 'basemap') {
+          this.renderExternalLayer(layer)
         }
       });
-
-      this.toggleExternalLayers();
 
       const sourceLayer = modelVT.id;
 
@@ -355,7 +285,93 @@ class Map extends React.Component {
       };
 
       this.map.on('sourcedata', onSourceData);
+
+
+      // Add overlay layer with overlay layerType
+      externalLayers.forEach(layer => {
+        if (layer.layerType === 'overlay') {
+          this.renderExternalLayer(layer)
+        }
+      });
+
+      this.toggleExternalLayers();
     });
+  }
+
+  renderExternalLayer(layer){
+    /** Render an external layer to map
+     * Layers come from the model. Each layer object must have:
+     * id:            Id of the layer
+     * label:         Label for display
+     * type:          (vector|raster)
+     * url:           Url to a tilejson or mapbox://. Use interchangeably with tiles
+     * tiles:         Array of tile url. Use interchangeably with url
+     * vectorLayers:  Array of source layers to show. Only in case of type vector
+     */
+    if (layer.type === 'vector') {
+      if (!layer.vectorLayers || !layer.vectorLayers.length) {
+        // eslint-disable-next-line no-console
+        return console.warn(
+          `Layer [${layer.label}] has missing (vectorLayers) property.`
+        );
+      }
+      if ((!layer.tiles || !layer.tiles.length) && !layer.url) {
+        // eslint-disable-next-line no-console
+        return console.warn(
+          `Layer [${layer.label}] must have (url) or (tiles) property.`
+        );
+      }
+
+      const sourceId = `ext-${layer.id}`;
+      let options = { type: 'vector' };
+
+      if (layer.tiles) {
+        options.tiles = layer.tiles;
+      } else if (layer.url) {
+        options.url = layer.url;
+      }
+
+      this.map.addSource(sourceId, options);
+      layer.vectorLayers.forEach(vt => {
+        buildLayersForSource(sourceId, vt).forEach(l => {
+          this.map.addLayer(l, labelsAndBordersLayer);
+        });
+      });
+
+      // Raster layer type.
+    } else if (layer.type === 'raster') {
+      if (!layer.tiles || !layer.tiles.length) {
+        // eslint-disable-next-line no-console
+        return console.warn(
+          `Layer [${layer.label}] must have (tiles) property.`
+        );
+      }
+      const sourceId = `ext-${layer.id}`;
+
+      let sourseOptions = {
+        type: 'raster',
+        tiles: layer.tiles
+      };
+      if (layer.tileSize) {
+        sourseOptions['tileSize'] = layer.tileSize
+      }
+      this.map.addSource(sourceId, sourseOptions);
+      this.map.addLayer(
+        {
+          id: `${sourceId}-tiles`,
+          type: 'raster',
+          source: sourceId
+        },
+        labelsAndBordersLayer
+      );
+    } else {
+      // eslint-disable-next-line no-console
+      console.warn(
+        `Layer [${
+          layer.label
+        }] has unsupported type [layer.type] and won't be added.`
+      );
+    }
   }
 
   toggleExternalLayers () {

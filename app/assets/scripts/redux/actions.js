@@ -21,8 +21,9 @@ export function requestModel (modelId) {
 }
 
 export function receiveModel (modelId, data, error = null) {
-  data.map.externalLayers = data.map.externalLayers.concat(
-      externalLayers['default'])
+  if (externalLayers['default']) {
+    data.map.externalLayers = externalLayers['default']
+  }
   return {
     type: RECEIVE_MODEL,
     id: modelId,

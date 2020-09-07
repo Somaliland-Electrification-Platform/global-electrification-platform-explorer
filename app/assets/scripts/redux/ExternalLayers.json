@@ -1,19 +1,73 @@
 [
   {
-    "description": "OSM Road from SDI",
-    "id": "osm-road-sdi",
-    "label": "OSM Road SDI",
-    "source": {
-      "label": "openstreetmap",
-      "url": "https://www.openstreetmap.org/"
-    },
+    "id": "mapbox_satellite",
+    "label": "Mapbox Satellite",
+    "description": "Satellite imagery provided by Mapbox from commercial providers, NASA, and USGS.",
     "type": "raster",
+    "layerType": "basemap",
     "tiles": [
-      "https://benin.gep.kartoza.com/geoserver/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=geonode%3Abenin_roads_osm&STYLES=geonode%3ABenin%20roads&SRS=EPSG%3A3857&CRS=EPSG%3A3857&TILED=true&access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&WIDTH=256&HEIGHT=256&BBOX={bbox-epsg-3857}"
-    ],
-    "tileSize": 256,
-    "vectorLayers": [
-      "data_layer"
+      "https://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}@2x.jpg?access_token=pk.eyJ1IjoiYWxla29yIiwiYSI6ImNqdGZwc2FoaDBkNjAzeXJ1b3B6bzR6Z2IifQ.m6OQgD-IfmhaVS3Xh5XNoQ"
     ]
+  },
+  {
+    "id": "healthsites",
+    "label": "Healthsites",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_healthcare_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "This dataset shows the healthsites in Benin.",
+    "source": {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org"
+    }
+  },
+  {
+    "id": "schools",
+    "label": "Schools",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_education_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "This dataset shows the schools in Benin.",
+    "source": {
+      "label": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org"
+    }
+  },
+  {
+    "id": "benin_transmission_lines",
+    "label": "Benin Transmission Lines",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_transmission_lines_clipped&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "This dataset shows transmission lines in benin.",
+    "source": {}
+  },
+  {
+    "id": "benin_distribution_lines",
+    "label": "Benin Distribution Lines",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_distribution_lines&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "This dataset shows distribution lines in benin.",
+    "source": {}
+  },
+  {
+    "id": "benin_solar_sites",
+    "label": "PV Sites",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "https://benin.gep.kartoza.com/geoserver/geonode/wms?access_token=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode%3Abenin_solar_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG%3A3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "This dataset shows PV sites in benin.",
+    "source": {}
   }
 ]
