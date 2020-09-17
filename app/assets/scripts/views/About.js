@@ -12,7 +12,7 @@ class About extends Component {
           <header className='inpage__header'>
             <div className='inpage__subheader'>
               <div className='inpage__headline'>
-                <h1 className='inpage__title'>About</h1>
+                <h1 className='inpage__title'><Trans>About</Trans></h1>
               </div>
             </div>
           </header>
