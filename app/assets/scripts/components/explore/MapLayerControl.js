@@ -3,9 +3,11 @@ import React from 'react';
 import { PropTypes as T } from 'prop-types';
 
 import { environment } from '../../config';
+import { Trans } from 'react-i18next';
 
 import ShadowScrollbars from '../ShadowScrollbar';
 import Dropdown from '../Dropdown';
+import i18n from "i18next";
 
 // React component for the layer control.
 // It is disconnected from the global state because it needs to be included
@@ -25,13 +27,13 @@ export default class LayerControlDropdown extends React.Component {
         alignment='left'
       >
         <ShadowScrollbars theme='light'>
-          <h6 className='drop__title'>Toggle layers</h6>
+          <h6 className='drop__title'><Trans>Toggle layers</Trans></h6>
           <ul className='layers-list'>
             {layersConfig.map((l, idx) => (
               <li className='layers-list__item' key={l.id}>
                 <div className='form__group'>
                   <Toggle
-                    text={l.label}
+                    text={i18n.t(l.label)}
                     name={`switch-${l.id}`}
                     title='Toggle on/off'
                     checked={layersState[idx]}
