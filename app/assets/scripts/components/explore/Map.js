@@ -158,11 +158,12 @@ class Map extends React.Component {
         }
       });
 
-      const sourceLayer = modelVT.id;
+      this.toggleExternalLayers();
 
+      const sourceLayer = 'somalia-cluster';
       this.map.addSource(gepFeaturesSourceId, {
         type: 'vector',
-        url: modelVT.url
+        tiles: ['http://somalia.gep.kartoza.com/geoserver/gwc/service/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&LAYER=geonode:somalia-cluster&STYLE=&TILEMATRIX=EPSG:3857:{z}&TILEMATRIXSET=EPSG:3857&FORMAT=application/vnd.mapbox-vector-tile&TILECOL={x}&TILEROW={y}']
       });
 
       // Init cluster polygon layers

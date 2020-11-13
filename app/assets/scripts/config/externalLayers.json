@@ -10,6 +10,18 @@
     ]
   },
   {
+    "id": "country_boundaries",
+    "label": "Country boundaries",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:country_boundaries&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {},
+    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:country_boundaries&STYLE=schools_unicef_2004&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+  },
+  {
     "id": "school_unicef_2004",
     "label": "School Unicef 2004",
     "type": "raster",
@@ -32,5 +44,29 @@
     "description": "",
     "source": {},
     "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:WHO_health_sites&STYLE=schools_unicef_2004&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+  },
+  {
+    "id": "national_transmission_backbone",
+    "label": "National transmission backbone",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Integrated_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {},
+    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Integrated_transmission_backbone&STYLE=schools_unicef_2004&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+  },
+  {
+    "id": "split_transmission_backbone",
+    "label": "Split transmission backbone",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Split_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {},
+    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Split_transmission_backbone&STYLE=schools_unicef_2004&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   }
 ]
