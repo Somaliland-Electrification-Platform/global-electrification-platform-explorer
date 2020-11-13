@@ -19,8 +19,7 @@
       "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:country_boundaries&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
-    "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:country_boundaries&STYLE=schools_unicef_2004&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "source": {}
   },
   {
     "id": "school_unicef_2004",
