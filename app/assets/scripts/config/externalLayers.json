@@ -14,6 +14,7 @@
     "label": "Country boundaries",
     "type": "raster",
     "layerType": "overlay",
+    "visibleByDefault": true,
     "tiles": [
       "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:country_boundaries&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],

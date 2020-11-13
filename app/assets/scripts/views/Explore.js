@@ -229,7 +229,7 @@ class Explore extends Component {
             } else return filter.options.map(option => option.value);
           })
           : [],
-        layersState: externalLayers.map(() => false),
+        layersState: externalLayers.map((layer) => !layer.visibleByDefault ? false : true),
         year: model.timesteps
           ? model.timesteps[model.timesteps.length - 1]
           : null
