@@ -164,7 +164,7 @@
 .home-intro__attribution {
   display: flex;
   list-style: none;
-  margin: 6rem 0 0 0;
+  margin: 5rem 0 0 0;
   padding: 0;
 
   li {
@@ -178,6 +178,16 @@
       height: 2.5rem;
     }
   }
+}
+
+.logo-moewr-home {
+  background: white;
+  padding: 10px;
+  height: auto;
+  display: inline-block;
+}
+
+.logo-moewr-home img{
 }
 
 
