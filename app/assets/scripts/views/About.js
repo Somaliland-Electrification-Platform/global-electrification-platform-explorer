@@ -39,8 +39,8 @@ class About extends Component {
                 </li>
                 <li>
                   <b>The World Bank :</b> Nicolina Lindblad –{' '}
-                  <a href='mailto:nlindblad@gmail.com'>
-                    nlindblad@gmail.com
+                  <a href='mailto:nlindblad@worldbank.org '>
+                    nlindblad@worldbank.org
                   </a>
                 </li>
                 <li>
