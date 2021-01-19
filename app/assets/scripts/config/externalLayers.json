@@ -104,5 +104,17 @@
     "description": "",
     "source": {},
     "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Potential_MG_hydro_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+  },
+  {
+    "id": "geonode:harvested_area_for_platform",
+    "label": "Sesame harvested area",
+    "type": "raster",
+    "layerType": "overlay",
+    "tiles": [
+      "http://somalia.gep.kartoza.com/geoserver/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=geonode:harvested_area_for_platform&STYLES=&SRS=EPSG%3A3857&CRS=EPSG%3A3857&TILED=true&access_token=None&WIDTH=256&HEIGHT=256&BBOX={bbox-epsg-3857}",
+    ],
+    "description": "",
+    "source": {},
+    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:harvested_area_for_platform&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   }
 ]
