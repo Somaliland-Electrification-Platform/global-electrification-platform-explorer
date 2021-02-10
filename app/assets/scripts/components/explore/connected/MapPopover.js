@@ -15,7 +15,7 @@ class MapPopover extends React.Component {
   }
 
   render () {
-    const { onCloseClick, feature: { isReady, getData } } = this.props;
+    const { onCloseClick, year, feature: { isReady, getData } } = this.props;
 
     const data = getData();
     return (
@@ -23,7 +23,7 @@ class MapPopover extends React.Component {
         <div className='popover__contents'>
           <header className='popover__header'>
             <div className='popover__headline'>
-              <h1 className='popover__title'>{i18n.t('Details')}</h1>
+              <h1 className='popover__title'>{i18n.t('Details')} for { year }</h1>
             </div>
             <div className='popover__header-toolbar'><a href='#' title='Close' className='tba-xmark tba--text-hidden' onClick={onCloseClick}><span>Close</span></a></div>
           </header>
