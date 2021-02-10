@@ -231,11 +231,10 @@ export function receiveFeature (key, data, error = null) {
 }
 
 export function fetchFeature (scenarioId, featureId, year) {
-  const key = `${scenarioId}--${featureId}`;
+  const key = `${scenarioId}--${featureId}--${year}`;
   const queryString = qs.stringify({
     year
   }, { addQueryPrefix: true, skipNulls: true });
-
   return fetchDispatchCacheFactory({
     statePath: ['individualFeatures', key],
     url: `${dataServiceUrl}/scenarios/${scenarioId}/features/${featureId}${queryString}`,

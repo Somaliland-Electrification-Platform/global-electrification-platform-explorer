@@ -73,7 +73,11 @@ class Map extends React.Component {
     this.clearMap = this.clearMap.bind(this);
     this.zoomToFeatures = this.zoomToFeatures.bind(this);
     this.state = {
-      mapLoaded: false
+      mapLoaded: false,
+      popup: {
+        fid: null,
+        latlng: null
+      }
     };
   }
 
@@ -275,7 +279,14 @@ class Map extends React.Component {
           layers: mapLayersIds
         });
         if (features.length) {
-          this.showPopover(features[0], e.lngLat);
+          this.showPopover(features[0].properties.id, e.lngLat);
+          this.setState(
+              { popup: {
+                        fid: features[0].properties.id,
+                        latlng: e.lngLat
+                      }
+            }
+          )
         }
       });
 
@@ -380,7 +391,6 @@ class Map extends React.Component {
     if (!this.state.mapLoaded) return;
 
     const { externalLayers, layersState } = this.props;
-
     externalLayers.forEach((layer, lIdx) => {
       if (layer.type === 'vector') {
         const layers = [
@@ -431,36 +441,57 @@ class Map extends React.Component {
     this.clearMap();
 
     if (isReady() && !hasError()) {
+      // Remove popup and rerender if the feature was selected
+      if (this.popover != null) {
+        this.popover.remove();
+      }
+
       const data = getData();
       const { layers } = data;
       const layerIds = Object.keys(layers);
+      const {popup: {fid, latlng}} = this.state;
 
       let featuresIds = [];
+      let popupOpened = false;
       for (const layerId of layerIds) {
         // Accumulate feature ids to perform map zoom
         featuresIds = featuresIds.concat(layers[layerId]);
 
+        if (fid && featuresIds.includes(fid)){
+          popupOpened = true;
+        }
         // Apply style to features on this layer
         this.map.setFilter(layerId, ['in', 'id'].concat(layers[layerId]));
       }
       this.zoomToFeatures(featuresIds);
+
+      // if popup opened, show popup
+      if (popupOpened) {
+        this.showPopover(fid, latlng);
+      } else{
+        this.setState({popup: {
+            fid: null,
+            latlng: null
+          }})
+      }
     }
   }
 
-  showPopover (feature, lngLat) {
+  showPopover (fid, lngLat) {
     let popoverContent = document.createElement('div');
-
-    const fid = feature.properties.id;
     const sid = this.props.scenario.getData().id;
-
     render(
       <MapPopover
         featureId={fid}
         scenarioId={sid}
-        year={this.props.year}
+        year={this.props.appliedYear}
         onCloseClick={e => {
           e.preventDefault();
           this.popover.remove();
+          this.setState({popup: {
+            fid: null,
+            latlng: null
+          }})
         }}
       />,
       popoverContent
@@ -510,6 +541,7 @@ if (environment !== 'production') {
     bounds: T.array,
     scenario: T.object,
     year: T.number,
+    appliedYear: T.number,
     handleLayerChange: T.func,
     modelVT: T.object,
     externalLayers: T.array,

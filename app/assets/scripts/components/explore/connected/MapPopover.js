@@ -18,7 +18,6 @@ class MapPopover extends React.Component {
     const { onCloseClick, feature: { isReady, getData } } = this.props;
 
     const data = getData();
-
     return (
       <article className='popover popover--map'>
         <div className='popover__contents'>
@@ -60,9 +59,8 @@ if (environment !== 'production') {
 }
 
 function mapStateToProps (state, props) {
-  const { scenarioId, featureId } = props;
-  const key = `${scenarioId}--${featureId}`;
-
+  const { scenarioId, featureId, year} = props;
+  const key = `${scenarioId}--${featureId}--${year}`;
   return {
     feature: wrapApiResult(getFromState(state.individualFeatures, key))
   };

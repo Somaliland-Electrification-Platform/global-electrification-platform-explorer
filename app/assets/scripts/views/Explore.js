@@ -253,7 +253,6 @@ class Explore extends Component {
     try {
       const model = this.props.model.getData();
       const { leversState: levers, filtersState: filters, year } = this.state;
-
       this.setState({
         appliedState: {
           filtersState: filters,
@@ -333,7 +332,6 @@ class Explore extends Component {
       countryName = name;
       hasMultipleModels = models.length > 1;
     }
-
     return (
       <App pageTitle='Explore'>
         {isReady() && (
@@ -379,6 +377,7 @@ class Explore extends Component {
                 bounds={bounds}
                 scenario={this.props.scenario}
                 year={this.state.year}
+                appliedYear={this.state.appliedState.year}
                 modelVT={model.map.modelVT}
                 externalLayers={model.map.externalLayers || []}
                 techLayers={model.map.techLayersConfig}
