@@ -5,9 +5,9 @@ import { environment } from '../../config';
 import i18n from "i18next";
 
 class Legend extends Component {
-  renderColor (layerId) {
+  renderColor (layerId, scenario) {
     const layer = this.props.techLayers.filter(l => l.id === layerId)[0];
-
+    const count = scenario.layers[layerId] ? scenario.layers[layerId].length : 0;
     const { title, label, color } = layer || {
       color: 'white',
       title: 'white',
@@ -21,14 +21,13 @@ class Legend extends Component {
             {title || label}
           </span>
         </dt>
-        <dd>{i18n.t(label)}</dd>
+        <dd>{i18n.t(label)} <span title={count + ` clusters`}>({ count })</span></dd>
       </Fragment>
     );
   }
 
   render () {
     const { scenario } = this.props;
-
     // Get layer ids from the pop properties.
     const layersIdsSet = new Set();
     Object.keys(scenario.summaryByType.popConnectedBaseYear)
@@ -45,7 +44,7 @@ class Legend extends Component {
         <div className='sum-block'>
           <h2 className='sum-block__title'>Legend</h2>
           <dl className='legend-list'>
-            {layersIds.map(layersId => this.renderColor(layersId))}
+            {layersIds.map(layersId => this.renderColor(layersId, scenario))}
           </dl>
         </div>
       )
