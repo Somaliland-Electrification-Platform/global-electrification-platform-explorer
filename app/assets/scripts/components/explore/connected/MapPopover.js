@@ -15,16 +15,15 @@ class MapPopover extends React.Component {
   }
 
   render () {
-    const { onCloseClick, feature: { isReady, getData } } = this.props;
+    const { onCloseClick, year, feature: { isReady, getData } } = this.props;
 
     const data = getData();
-
     return (
       <article className='popover popover--map'>
         <div className='popover__contents'>
           <header className='popover__header'>
             <div className='popover__headline'>
-              <h1 className='popover__title'>{i18n.t('Details')}</h1>
+              <h1 className='popover__title'>{i18n.t('Details')} for { year }</h1>
             </div>
             <div className='popover__header-toolbar'><a href='#' title='Close' className='tba-xmark tba--text-hidden' onClick={onCloseClick}><span>Close</span></a></div>
           </header>
@@ -60,9 +59,8 @@ if (environment !== 'production') {
 }
 
 function mapStateToProps (state, props) {
-  const { scenarioId, featureId } = props;
-  const key = `${scenarioId}--${featureId}`;
-
+  const { scenarioId, featureId, year} = props;
+  const key = `${scenarioId}--${featureId}--${year}`;
   return {
     feature: wrapApiResult(getFromState(state.individualFeatures, key))
   };
