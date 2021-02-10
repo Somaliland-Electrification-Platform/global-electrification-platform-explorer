@@ -23,7 +23,7 @@ import {subUrl} from './config';
 const resources = {
     en: {translation: en},
     // id: {translation: id},
-    fr: {translation: fr}
+    // fr: {translation: fr}
 };
 
 /** Return base url
