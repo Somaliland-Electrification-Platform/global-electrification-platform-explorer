@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes as T } from 'prop-types';
 
@@ -8,12 +8,35 @@ import { fetchFeature } from '../../../redux/actions';
 import { store } from '../../../store';
 import { formatThousands, formatKeyIndicator } from '../../../utils';
 import i18n from "i18next";
+import * as popupConfig   from '../../../config/popupDetailsConfig';
+
 class MapPopover extends React.Component {
   componentDidMount () {
     const { scenarioId, featureId, fetchFeature, year } = this.props;
     fetchFeature(scenarioId, featureId, year);
   }
-
+  renderDetail (data, confIdx) {
+    const config = popupConfig[confIdx];
+    const rendered = !!data[config.field];
+    let value = formatThousands(data[config.field], 0)
+    if (config.keyIndicator) {
+      value = formatKeyIndicator(data[config.field], config.keyIndicator);
+    }
+    if (config.prefix) {
+      value = config.prefix + value;
+    }
+    return (
+      <Fragment key={confIdx}>
+        {rendered ? (
+            <Fragment>
+              <dt>{i18n.t(config.label)}</dt>
+              <dd>{value}</dd>
+            </Fragment>
+        ) : (<Fragment></Fragment>)
+        }
+      </Fragment>
+    );
+  }
   render () {
     const { onCloseClick, year, feature: { isReady, getData } } = this.props;
 
@@ -30,12 +53,7 @@ class MapPopover extends React.Component {
           <div className='popover__body'>
             {isReady() ? (
               <dl className='map-number-list'>
-                <dt>{i18n.t('Population connected')}</dt>
-                <dd>{formatThousands(data.peopleConnected, 0)}</dd>
-                <dt>{i18n.t('Investment required')}</dt>
-                <dd><small>$</small> {formatThousands(data.investmentCost, 0)}</dd>
-                <dt>{i18n.t('Added capacity')}</dt>
-                <dd>{formatKeyIndicator(data.newCapacity, 'power')}</dd>
+                {Object.keys(popupConfig).map(confIdx => this.renderDetail(data, confIdx))}
               </dl>
             ) : (
               <p>{i18n.t('Loading')}</p>

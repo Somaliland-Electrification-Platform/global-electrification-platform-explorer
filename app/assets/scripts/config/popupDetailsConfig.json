@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Total population",
+    "field": "Pop"
+  },
+  {
+    "label": "Total buildings",
+    "field": "Buildings"
+  },
+  {
+    "label": "New people connected in timestep",
+    "field": "NewConnections"
+  },
+  {
+    "label": "Investment required in timestep",
+    "field": "investmentCost",
+    "prefix": "$ "
+  },
+  {
+    "label": "Added capacity in timestep",
+    "field": "newCapacity",
+    "keyIndicator": "power"
+  }
+]
