@@ -3,6 +3,7 @@ import qs from 'qs';
 import { fetchDispatchCacheFactory, fetchDispatchFactory } from './utils';
 import { dataServiceUrl } from '../config';
 import * as externalLayers   from '../config/externalLayers';
+import * as popupConfig   from '../config/popupDetailsConfig';
 
 /*
  * Actions for Models
@@ -232,8 +233,12 @@ export function receiveFeature (key, data, error = null) {
 
 export function fetchFeature (scenarioId, featureId, year) {
   const key = `${scenarioId}--${featureId}--${year}`;
+  const extraFields = Object.keys(popupConfig).map(confIdx => {
+    return popupConfig[confIdx].field
+  })
   const queryString = qs.stringify({
-    year
+    year,
+    extra_field: extraFields.slice(0, extraFields.length-1).join(',')
   }, { addQueryPrefix: true, skipNulls: true });
   return fetchDispatchCacheFactory({
     statePath: ['individualFeatures', key],
