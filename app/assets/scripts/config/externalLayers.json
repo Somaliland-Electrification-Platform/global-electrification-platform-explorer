@@ -16,7 +16,7 @@
     "layerType": "overlay",
     "visibleByDefault": true,
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:country_boundaries1&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:country_boundaries1&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {}
@@ -27,11 +27,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Primary_and_secondary_schools&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Primary_and_secondary_schools&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Primary_and_secondary_schools&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Primary_and_secondary_schools&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "who_health_sites",
@@ -39,11 +39,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:WHO_health_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:WHO_health_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:WHO_health_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:WHO_health_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "national_transmission_backbone",
@@ -51,11 +51,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Integrated_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Integrated_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Integrated_transmission_backbone&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Integrated_transmission_backbone&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "split_transmission_backbone",
@@ -63,11 +63,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Split_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Split_transmission_backbone&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Split_transmission_backbone&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Split_transmission_backbone&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "existing_mini_grids",
@@ -75,11 +75,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Existing_mini_grids&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Existing_mini_grids&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Existing_mini_grids&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Existing_mini_grids&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "existing_mv_lines",
@@ -87,11 +87,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Existing_MV_line_locations&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Existing_MV_line_locations&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Existing_MV_line_locations&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Existing_MV_line_locations&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "potential_hydro_mini_grid_sites",
@@ -99,11 +99,11 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Potential_MG_hydro_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+      "https://somalia.gep.kartoza.com/geoserver/geonode/wms?access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:Potential_MG_hydro_sites&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Potential_MG_hydro_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:Potential_MG_hydro_sites&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   },
   {
     "id": "geonode:harvested_area_for_platform",
@@ -111,10 +111,10 @@
     "type": "raster",
     "layerType": "overlay",
     "tiles": [
-      "http://somalia.gep.kartoza.com/geoserver/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=geonode:harvested_area_for_platform&STYLES=&SRS=EPSG%3A3857&CRS=EPSG%3A3857&TILED=true&access_token=None&WIDTH=256&HEIGHT=256&BBOX={bbox-epsg-3857}",
+      "https://somalia.gep.kartoza.com/geoserver/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=geonode:harvested_area_for_platform&STYLES=&SRS=EPSG%3A3857&CRS=EPSG%3A3857&TILED=true&access_token=None&WIDTH=256&HEIGHT=256&BBOX={bbox-epsg-3857}",
     ],
     "description": "",
     "source": {},
-    "legend": "http://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:harvested_area_for_platform&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
+    "legend": "https://somalia.gep.kartoza.com/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:harvested_area_for_platform&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on&access_token=BSWfM7SdaAmeupjN6NlQXbEiHieeO8"
   }
 ]

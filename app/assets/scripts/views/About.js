@@ -67,33 +67,6 @@ class About extends Component {
               <dl className='logo-list'>
                 <dd>
                   <a
-                    href='https://www.worldbank.org/'
-                    title={i18n.t('Visit')+' World Bank'}
-                    target='_blank'
-                  >
-                    <img
-                      alt='WBG Logo'
-                      src='/assets/graphics/content/logos/logo-wbg.png'
-                    />
-                    <span>KTH</span>
-                  </a>
-                </dd>
-                <dd>
-                  <a
-                    href='https://www.esmap.org/'
-                    title={i18n.t('Visit')+' Energy Sector Management Assistance Program'}
-                    className='logo-esmap'
-                    target='_blank'
-                  >
-                    <img
-                      alt='ESMAP Logo'
-                      src='/assets/graphics/content/logos/logo-esmap.png'
-                    />
-                    <span>ESMAP</span>
-                  </a>
-                </dd>
-                <dd>
-                  <a
                     href='https://moewr.gov.so/'
                     title={i18n.t('Visit')+' Ministry of Energy and Water Resources'}
                     target='_blank'

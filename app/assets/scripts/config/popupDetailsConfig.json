@@ -8,10 +8,6 @@
     "field": "Buildings"
   },
   {
-    "label": "New people connected in timestep",
-    "field": "NewConnections"
-  },
-  {
     "label": "Investment required in timestep",
     "field": "investmentCost",
     "prefix": "$ "
