@@ -25,7 +25,7 @@ class About extends Component {
                 <Trans>Users can explore 192 different scenarios to meet the access goals. These different combinations and parameters are presented in the form of "levers". Users can overlay additional layers as well (e.g., electricity networks, location of health facilities) to help illustrate useful contextual information.</Trans>
               </p>
               <p>
-                <Trans>A number of public and private partners have provided important data for the project. In total, four federal state ministries (the Ministry of Energy and Water Resources, Ministry of Education, Culture and Higher Education, Ministry of Health and Ministry of Agriculture and Irrigation), the five Federal Member States and 25 ESPs have provided their support in collecting and/or providing data for the project so far. The ESPs that have supplied data so far are; Adaado Electric Company, Altowba Electric Company, AMAL, Badhan Electricity Company, Baidoa Electric Company, Beco Powering Somalia, Blue Sky, Dayah Electric Company, Dayax Power Supply, El Wak Electric Company, ENEE, Galmudug Electric Company, Halgan Power Supply, Hilac Electric Company, Ilays, Jalalaqsi Power Supply, JESCO, Kaah Electric Company, NECSOM, NEPCO, Shabelle Energy Service, Somwater, Somali Power and Lighting Company, Wehliye Power Supply and WESCO. Their contributions are gratefully acknowledged, as this data significantly improves the quality and usefulness of this analysis, and provides a strong base for future updates.</Trans>
+                <Trans>A number of public and private partners have provided important data for the project. In total, four federal state ministries (the Ministry of Energy and Water Resources, Ministry of Education, Culture and Higher Education, Ministry of Health and Ministry of Agriculture and Irrigation), the five Federal Member States and 32 ESPs have provided their support in collecting and/or providing data for the project so far. The ESPs that have supplied data so far are; Adaado Electric Company, Al-Towba Electric Company, Amal Technology, Badhan Electricity Company, Baidoa Electric Company, BECO Powering Somalia, Bikash Power Supply Company, Blue Sky, Dayah Electric Company, Dayax Power Supply, El Wak Electric Company, ENEE, Galmudug Electric Company, Gobaad Energy, Hadeed Electric Company, Halgan Power Supply, Hilaac Electric Company, Ilyas, Jalalaqsi Power Supply, JESCO, KAAH Electric Company, Mahas Electric Company, Mogadishu Power Supply, NECSOM, NEPCO, Shabelle Energy Service, Somwater, Somali Power and Lighting Company, Warsheikh Electric Company, Wehliye Power Supply, WESCO and Yaka Electric Company. Their contributions are gratefully acknowledged, as this data significantly improves the quality and usefulness of this analysis, and provides a strong base for future updates.</Trans>
               </p>
               <p>
                 <Trans>For more information, please contact the development team</Trans>:
@@ -35,12 +35,6 @@ class About extends Component {
                   <b>The Ministry of Energy and Water Resources :</b> Abdisalam Abdullahi –{' '}
                   <a href='mailto:seap.procurement@gmail.com'>
                     seap.procurement@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <b>The World Bank :</b> Nicolina Lindblad –{' '}
-                  <a href='mailto:nlindblad@worldbank.org '>
-                    nlindblad@worldbank.org
                   </a>
                 </li>
                 <li>
