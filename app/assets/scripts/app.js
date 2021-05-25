@@ -14,16 +14,12 @@ import UhOh from './views/UhOh';
 
 // translation files
 import en from "./../translations/en.json";
-import id from "./../translations/id.json";
-import fr from "./../translations/fr.json";
 
 import {getCookie, setCookie} from "./utils";
 import {subUrl} from './config';
 
 const resources = {
-    en: {translation: en},
-    // id: {translation: id},
-    // fr: {translation: fr}
+    en: {translation: en}
 };
 
 /** Return base url

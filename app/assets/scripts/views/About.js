@@ -19,72 +19,22 @@ class About extends Component {
           <div className='inpage__body'>
             <div className='prose'>
               <p>
-                <Trans>The Somalia Electrification Platform is an open access, interactive, online platform that allows for overview of electrification investment scenarios for Somalia developed under the Somali Electricity Access Project (SEAP) for the Ministry of Energy and Water Resources (MoEWR) in the Federal Republic of Somalia. The scenarios present pathways for achieving universal electricity access, split into an intermediate strategy for 2025 and full electrification by 2030.</Trans>
-              </p>
-              <p>
-                <Trans>Users can explore 192 different scenarios to meet the access goals. These different combinations and parameters are presented in the form of "levers". Users can overlay additional layers as well (e.g., electricity networks, location of health facilities) to help illustrate useful contextual information.</Trans>
-              </p>
-              <p>
-                <Trans>A number of public and private partners have provided important data for the project. In total, four federal state ministries (the Ministry of Energy and Water Resources, Ministry of Education, Culture and Higher Education, Ministry of Health and Ministry of Agriculture and Irrigation), the five Federal Member States and 32 ESPs have provided their support in collecting and/or providing data for the project so far. The ESPs that have supplied data so far are; Adaado Electric Company, Al-Towba Electric Company, Amal Technology, Badhan Electricity Company, Baidoa Electric Company, BECO Powering Somalia, Bikash Power Supply Company, Blue Sky, Dayah Electric Company, Dayax Power Supply, El Wak Electric Company, ENEE, Galmudug Electric Company, Gobaad Energy, Hadeed Electric Company, Halgan Power Supply, Hilaac Electric Company, Ilyas, Jalalaqsi Power Supply, JESCO, KAAH Electric Company, Mahas Electric Company, Mogadishu Power Supply, NECSOM, NEPCO, Shabelle Energy Service, Somwater, Somali Power and Lighting Company, Warsheikh Electric Company, Wehliye Power Supply, WESCO and Yaka Electric Company. Their contributions are gratefully acknowledged, as this data significantly improves the quality and usefulness of this analysis, and provides a strong base for future updates.</Trans>
+                Description
               </p>
               <p>
                 <Trans>For more information, please contact the development team</Trans>:
               </p>
               <ul>
                 <li>
-                  <b>The Ministry of Energy and Water Resources :</b> Abdisalam Abdullahi –{' '}
-                  <a href='mailto:seap.procurement@gmail.com'>
-                    seap.procurement@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <b>KTH Energy Systems:</b> Andreas Sahlberg –{' '}
-                  <a href='mailto:asahl@kth.se'>
-                    asahl@kth.se
-                  </a>
-                </li>
-                <li>
                   <b>Kartoza:</b> Tim Sutton –{' '}
                   <a href='mailto:tim@kartoza.com'>
                     tim@kartoza.com
-                  </a>
-                </li>
-                <li>
-                  <b>Recon Energy:</b> Aden Abdi –{' '}
-                  <a href='mailto:info@recon.com '>
-                    info@recon.com
                   </a>
                 </li>
               </ul>
 
               <h2 className='visually-hidden'>Credits</h2>
               <dl className='logo-list'>
-                <dd>
-                  <a
-                    href='https://moewr.gov.so/'
-                    title={i18n.t('Visit')+' Ministry of Energy and Water Resources'}
-                    target='_blank'
-                  >
-                    <img
-                      alt='Ministry of Energy and Water Resources Logo'
-                      src='/assets/graphics/content/logos/logo-moewr.jpg'
-                    />
-                    <span>Ministry of Energy and Water Resources</span>
-                  </a>
-                </dd>
-                <dd>
-                  <a
-                    href='https://www.kth.se/en'
-                    title={i18n.t('Visit')+' KTH'}
-                    target='_blank'
-                  >
-                    <img
-                      alt='KTH Logo'
-                      src='/assets/graphics/content/logos/logo-kth.png'
-                    />
-                    <span>KTH</span>
-                  </a>
-                </dd>
                 <dd>
                   <a
                     href='https://kartoza.com/'
@@ -94,20 +44,6 @@ class About extends Component {
                     <img
                       alt='Kartoza Logo'
                       src='/assets/graphics/content/logos/logo-kartoza.svg'
-                    />
-                    <span>KTH</span>
-                  </a>
-                </dd>
-                <dd>
-                  <a
-                    href='http://www.recon.so/'
-                    title={i18n.t('Visit')+' Recon'}
-                    target='_blank'
-                  >
-                    <img
-                      alt='SVN Logo'
-                      src='/assets/graphics/content/logos/logo-recon.png'
-                      height={'100%'}
                     />
                     <span>KTH</span>
                   </a>
