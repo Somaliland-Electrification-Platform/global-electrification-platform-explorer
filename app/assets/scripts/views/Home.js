@@ -94,19 +94,6 @@ class Home extends Component {
               </p>
 
               <ul className='home-intro__attribution'>
-                <li>
-                  <a
-                    href='https://moewr.gov.so/'
-                    title={i18n.t('Visit')+' Ministry of Energy and Water Resources'}
-                    className='logo-moewr-home'
-                    target='_blank'
-                  >
-                    <img
-                      alt='Ministry of Energy and Water Resources Logo'
-                      src='/assets/graphics/content/logos/logo-moewr.jpg'
-                    />
-                  </a>
-                </li>
               </ul>
             </section>
 

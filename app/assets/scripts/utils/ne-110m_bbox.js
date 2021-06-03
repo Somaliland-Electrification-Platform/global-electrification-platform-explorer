@@ -229,6 +229,22 @@ export const worldGeoJSON = {
     },
     {
       type: 'Feature',
+      properties: { ISO_A2: 'SOL' },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [41.09812132748789, 7.909400581783637],
+            [50.15112854400973, 7.909400581783637],
+            [50.15112854400973, 12.02464],
+            [41.09812132748789, 12.02464],
+            [41.09812132748789, 7.909400581783637]
+          ]
+        ]
+      }
+    },
+    {
+      type: 'Feature',
       properties: { ISO_A2: 'KE' },
       geometry: {
         type: 'Polygon',
