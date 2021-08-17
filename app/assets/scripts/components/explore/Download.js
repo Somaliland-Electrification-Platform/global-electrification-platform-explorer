@@ -347,10 +347,11 @@ export function downloadPDF (props) {
       options
     );
 
+    let itemTop = 0;
     layerKeys.forEach((layer, i) => {
       // Currently picked up from the app config. Will be switched to model config from the props
       let layerItem = model.map.techLayersConfig.find(l => l.id === layer);
-      let itemTop = options.headerHeight + mapHeight + 112 - 2 + i * 24;
+      itemTop = options.headerHeight + mapHeight + 80 - 2 + i * 24;
 
       // Marker
       doc
@@ -389,6 +390,46 @@ export function downloadPDF (props) {
           });
       }
     });
+
+    // TODO:
+    //  Adding extraInvestmentCost per scenarios
+    //  We need to think in elegant way
+    if (output.id === 'investmentCost' && scenarioData.extraInvestmentCost) {
+      const total = formatThousands(scenarioData.summary[output.id] + scenarioData.extraInvestmentCost,0);
+      const position = itemTop + 16 + 1 + 8*3;
+      doc
+      .fontSize(8)
+      .font(baseFont)
+      .fillColor(options.baseFontColor, 1)
+      .text('HV Backbone Cost', outputLeft, position, {
+        width: options.colWidthThreeCol
+      });
+      const extraInvestmentCost = formatThousands(scenarioData.extraInvestmentCost, 0);
+      doc
+        .fontSize(8)
+        .font(baseFont)
+        .fillColor(options.baseFontColor, 1)
+        .text(extraInvestmentCost, outputLeft, position, {
+          width: options.colWidthThreeCol,
+          align: 'right'
+        });
+
+      // Dividing line
+      doc
+        .rect(outputLeft, position + 16, options.colWidthThreeCol, 1)
+        .fillColor('#192F35', 0.08)
+        .fill();
+
+      // total
+      doc
+        .fontSize(8)
+        .font(boldFont)
+        .fillColor(options.baseFontColor, 1)
+        .text(total, outputLeft, position + 8 + 16, {
+          width: options.colWidthThreeCol,
+          align: 'right'
+        });
+    }
   });
 
   drawFooter(doc, options);

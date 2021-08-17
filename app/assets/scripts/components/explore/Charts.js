@@ -58,6 +58,43 @@ class Charts extends Component {
     });
   }
 
+  // TODO:
+  //  Adding extraInvestmentCost per scenarios
+  //  We need to think in elegant way
+  extraPopover () {
+    const {
+      keyIndicator
+    } = this.state;
+
+    const { summary, extraInvestmentCost } = this.props.scenario;
+    if (keyIndicator === 'investmentCost' && extraInvestmentCost) {
+      const { format } = indicatorsLabels[keyIndicator];
+
+      return (
+        <div>
+          <hr style={{width : "100%"}}/>
+          <dl className="chart-number-list">
+            <dt><span>Total Cost</span></dt>
+            <dd>{format(summary[keyIndicator])}</dd>
+            <dt><span>HV Cost</span></dt>
+            <dd>{format(extraInvestmentCost)}</dd>
+          </dl>
+          <hr style={{width : "100%"}}/>
+          <div>
+            <dl className="chart-number-list" style={{marginBottom: 0}}>
+              <dt><span>Investment Required</span></dt>
+            </dl>
+            <div>
+              <b>{format(summary[keyIndicator] + extraInvestmentCost)}</b>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+        return ''
+    }
+  }
+
   renderPopover () {
     const {
       popoverIsVisible,
@@ -103,6 +140,7 @@ class Charts extends Component {
                     );
                   })}
                 </dl>
+                 {this.extraPopover()}
               </div>
             </div>
           </article>
@@ -494,6 +532,17 @@ class Charts extends Component {
 
   renderChart (keyIndicator) {
     const { summary, summaryByType } = this.props.scenario;
+
+    // TODO:
+    //  Adding extraInvestmentCost per scenarios
+    //  We need to think in elegant way
+    let summaryIndicator = summary[keyIndicator]
+    if (keyIndicator === 'investmentCost') {
+      const { extraInvestmentCost } = this.props.scenario;
+      if (extraInvestmentCost) {
+        summaryIndicator = summaryIndicator + extraInvestmentCost
+      }
+    }
     const techLayers = this.props.techLayers;
     let { label } = indicatorsLabels[keyIndicator];
     label = i18n.t(label)
@@ -532,7 +581,7 @@ class Charts extends Component {
               ) : (
                 <text className='values' y='0.5em'>
                   <tspan className='value--prime' x='0' textAnchor='middle'>
-                    {format(summary[keyIndicator])}
+                    {format(summaryIndicator)}
                   </tspan>
                 </text>
               )}

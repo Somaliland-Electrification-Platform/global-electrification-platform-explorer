@@ -60,6 +60,12 @@ export function requestScenario () {
 }
 
 export function receiveScenario (data, error = null) {
+  // TODO:
+  //  Adding extraInvestmentCost per scenarios
+  //  We need to think in elegant way
+  if (data.id.includes('sol-1-1')) {
+    data.extraInvestmentCost = 81400000
+  }
   return {
     type: RECEIVE_SCENARIO,
     data,
