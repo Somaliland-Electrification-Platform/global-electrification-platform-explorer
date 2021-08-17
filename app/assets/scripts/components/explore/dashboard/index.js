@@ -62,7 +62,9 @@ class Dashboard extends Component {
         />
       );
     } else if (activeTab === 'filters') {
-      const { filters } = this.props.model;
+      const { getData } = this.props.scenario;
+      const data = getData();
+      const { filters } = data;
       const { filtersState } = this.props;
       return (
         <Filters

@@ -21,6 +21,11 @@ class Filters extends Component {
     ReactTooltip.rebuild();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    const { filtersConfig } = nextProps;
+    return filtersConfig !== undefined;
+  }
+
   renderRangeFilter (filter, filterIdx) {
     const filterState = this.props.filtersState[filterIdx];
     const { min, max } = filter.range;

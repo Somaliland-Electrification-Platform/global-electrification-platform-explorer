@@ -362,6 +362,7 @@ class Explore extends Component {
 
               <Dashboard
                 model={model}
+                scenario={this.props.scenario}
                 onApplyClick={this.onApplyClick}
                 onResetClick={this.onResetClick}
                 handleLeverChange={this.handleLeverChange}
