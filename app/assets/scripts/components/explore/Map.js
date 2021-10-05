@@ -164,10 +164,10 @@ class Map extends React.Component {
 
       this.toggleExternalLayers();
 
-      const sourceLayer = 'Somaliland_WBPeanutButter_clusters_clipped';
+      const sourceLayer = 'Somaliland_WBPopulation_clusters_clipped';
       this.map.addSource(gepFeaturesSourceId, {
         type: 'vector',
-        tiles: ['https://somaliland.gep.kartoza.com/geoserver/gwc/service/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&LAYER=geonode:Somaliland_WBPeanutButter_clusters_clipped&STYLE=&TILEMATRIX=EPSG:3857:{z}&TILEMATRIXSET=EPSG:3857&FORMAT=application/vnd.mapbox-vector-tile&TILECOL={x}&TILEROW={y}']
+        tiles: ['https://somaliland.gep.kartoza.com/geoserver/gwc/service/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&LAYER=geonode:Somaliland_WBPopulation_clusters_clipped&STYLE=&TILEMATRIX=EPSG:3857:{z}&TILEMATRIXSET=EPSG:3857&FORMAT=application/vnd.mapbox-vector-tile&TILECOL={x}&TILEROW={y}']
       });
 
       // Init cluster polygon layers
