@@ -8,5 +8,41 @@
     "tiles": [
       "https://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}@2x.jpg?access_token=pk.eyJ1IjoiYWxla29yIiwiYSI6ImNqdGZwc2FoaDBkNjAzeXJ1b3B6bzR6Z2IifQ.m6OQgD-IfmhaVS3Xh5XNoQ"
     ]
+  },
+  {
+    "id": "basemap",
+    "label": "Somaliland Basemap",
+    "type": "raster",
+    "layerType": "basemap",
+    "visibleByDefault": true,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:somalilandbasemap&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
+  },
+  {
+    "id": "somaliland_health_facilities",
+    "label": "Health Facilities",
+    "type": "raster",
+    "layerType": "overlay",
+    "visibleByDefault": false,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:somaliland_health_facilities&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
+  },
+  {
+    "id": "somaliland_education_facilities",
+    "label": "Education Facilities",
+    "type": "raster",
+    "layerType": "overlay",
+    "visibleByDefault": false,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:somaliland_unicef_education_facilities&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
   }
 ]
