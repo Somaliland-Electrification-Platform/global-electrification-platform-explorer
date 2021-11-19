@@ -103,6 +103,12 @@ class Map extends React.Component {
       this.toggleExternalLayers();
     }
 
+    const prevLTransparency = prevProps.layersTransparency.join('');
+    const lTransparency = this.props.layersTransparency.join('');
+    if (prevLTransparency !== lTransparency) {
+      this.transparencyExternalLayers();
+    }
+
     // Manually render detached component.
     this.layerDropdownControl &&
       this.layerDropdownControl.render(this.props, this.state);
@@ -141,7 +147,9 @@ class Map extends React.Component {
       <LayerControlDropdown
         layersConfig={props.externalLayers}
         layersState={props.layersState}
+        layersTransparency={props.layersTransparency}
         handleLayerChange={props.handleLayerChange}
+        handleLayerTransparencyChange={props.handleLayerTransparencyChange}
       />
     ));
 
@@ -163,6 +171,7 @@ class Map extends React.Component {
       });
 
       this.toggleExternalLayers();
+      this.transparencyExternalLayers();
 
       const sourceLayer = clusterSourceName;
       this.map.addSource(gepFeaturesSourceId, {
@@ -308,6 +317,7 @@ class Map extends React.Component {
       });
 
       this.toggleExternalLayers();
+      this.transparencyExternalLayers();
     });
   }
 
@@ -392,23 +402,65 @@ class Map extends React.Component {
 
     const { externalLayers, layersState } = this.props;
     externalLayers.forEach((layer, lIdx) => {
+      const visibility = layersState[lIdx] ? 'visible' : 'none';
       if (layer.type === 'vector') {
         const layers = [
           `ext-${layer.id}-line`,
           `ext-${layer.id}-polygon`,
           `ext-${layer.id}-point`
         ];
-        const visibility = layersState[lIdx] ? 'visible' : 'none';
         layers.forEach(l =>
           this.map.setLayoutProperty(l, 'visibility', visibility)
         );
       } else if (layer.type === 'raster') {
-        const visibility = layersState[lIdx] ? 'visible' : 'none';
         this.map.setLayoutProperty(
           `ext-${layer.id}-tiles`,
           'visibility',
           visibility
         );
+      } else if (layer.layerType === 'cluster') {
+        // The toggle layer for cluster
+        const { techLayers } = this.props;
+        this.map.setLayoutProperty('hovered-outline', 'visibility', visibility);
+        this.map.setLayoutProperty('hovered-fill', 'visibility', visibility);
+        this.map.setLayoutProperty('selected', 'visibility', visibility);
+        for (const layer of techLayers) {
+          this.map.setLayoutProperty(
+            layer.id,
+            'visibility',
+            visibility
+          );
+        };
+      }
+    });
+  }
+
+  transparencyExternalLayers () {
+    if (!this.state.mapLoaded) return;
+
+    const { externalLayers, layersTransparency } = this.props;
+    externalLayers.forEach((layer, lIdx) => {
+      const transparency = (layersTransparency[lIdx] ? layersTransparency[lIdx] : 100) / 100;
+      if (layer.type === 'vector') {
+        this.map.setPaintProperty(`ext-${layer.id}-line`, 'line-opacity', transparency);ncy
+        this.map.setPaintProperty(`ext-${layer.id}-polygon`, 'fill-opacity', transparency);
+        this.map.setPaintProperty(`ext-${layer.id}-point`, 'circle-opacity', transparency);
+      } else if (layer.type === 'raster') {
+        this.map.setPaintProperty(
+          `ext-${layer.id}-tiles`,
+          'raster-opacity',
+          transparency
+        );
+      } else if (layer.layerType === 'cluster') {
+        // The toggle layer for cluster
+        const { techLayers } = this.props;
+        for (const layer of techLayers) {
+          this.map.setPaintProperty(
+              layer.id,
+              'fill-opacity',
+              transparency
+          );
+        };
       }
     });
   }
@@ -516,7 +568,7 @@ class Map extends React.Component {
   }
 
   render () {
-    const { externalLayers, layersState } = this.props;
+    const { externalLayers, layersState, layersTransparency } = this.props;
     return (
       <section className='exp-map'>
         <h1 className='exp-map__title'>Map</h1>
@@ -543,10 +595,12 @@ if (environment !== 'production') {
     year: T.number,
     appliedYear: T.number,
     handleLayerChange: T.func,
+    handleLayerTransparencyChange: T.func,
     modelVT: T.object,
     externalLayers: T.array,
     techLayers: T.array,
-    layersState: T.array
+    layersState: T.array,
+    layersTransparency: T.array,
   };
 }
 

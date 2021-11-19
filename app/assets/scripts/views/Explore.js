@@ -37,6 +37,7 @@ class Explore extends Component {
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.handleLeverChange = this.handleLeverChange.bind(this);
     this.handleLayerChange = this.handleLayerChange.bind(this);
+    this.handleLayerTransparencyChange = this.handleLayerTransparencyChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
 
     this.state = {
@@ -45,6 +46,7 @@ class Explore extends Component {
       filtersState: [],
       leversState: [],
       layersState: [],
+      layersTransparency: [],
       year: null,
       appliedState: {}
     };
@@ -174,6 +176,16 @@ class Explore extends Component {
     this.setState({ layersState });
   }
 
+  handleLayerTransparencyChange (layerIdx, value) {
+    const layersTransparency = cloneArrayAndChangeCell(
+      this.state.layersTransparency,
+      layerIdx,
+      value
+    );
+
+    this.setState({ layersTransparency });
+  }
+
   handleYearChange (year) {
     this.setState({ year });
   }
@@ -230,6 +242,7 @@ class Explore extends Component {
           })
           : [],
         layersState: externalLayers.map((layer) => !layer.visibleByDefault ? false : true),
+        layersTransparency: externalLayers.map((layer) => 100),
         year: model.timesteps
           ? model.timesteps[model.timesteps.length - 1]
           : null
@@ -384,6 +397,8 @@ class Explore extends Component {
                 techLayers={model.map.techLayersConfig}
                 layersState={this.state.layersState}
                 handleLayerChange={this.handleLayerChange}
+                layersTransparency={this.state.layersTransparency}
+                handleLayerTransparencyChange={this.handleLayerTransparencyChange}
               />
               <Summary
                 country={this.props.country}

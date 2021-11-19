@@ -25,6 +25,17 @@ export function receiveModel (modelId, data, error = null) {
   if (externalLayers['default']) {
     data.map.externalLayers = externalLayers['default']
   }
+
+  // TODO:
+  //  This is hacky way, this is needed for the cluster layer
+  data.map.externalLayers.unshift(
+    {
+      "id": "clusters",
+      "label": "Clusters",
+      "layerType": "cluster",
+      "visibleByDefault": true
+    }
+  )
   return {
     type: RECEIVE_MODEL,
     id: modelId,

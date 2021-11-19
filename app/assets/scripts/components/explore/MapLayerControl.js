@@ -14,7 +14,7 @@ import i18n from "i18next";
 // via the mapbox code.
 export default class LayerControlDropdown extends React.Component {
   render () {
-    const { layersConfig, layersState, handleLayerChange } = this.props;
+    const { layersConfig, layersState, handleLayerChange, layersTransparency, handleLayerTransparencyChange } = this.props;
 
     return (
       <Dropdown
@@ -27,32 +27,43 @@ export default class LayerControlDropdown extends React.Component {
         alignment='left'
       >
         <ShadowScrollbars theme='light'>
-          <h6 className='drop__title'><Trans>Toggle layers</Trans></h6>
-          <ul className='layers-list'>
-            {layersConfig.map((l, idx) => (
-              <li className='layers-list__item' key={l.id}>
-                <div className='form__group'>
-                  <Toggle
-                    text={i18n.t(l.label)}
-                    name={`switch-${l.id}`}
-                    title='Toggle on/off'
-                    checked={layersState[idx]}
-                    onChange={() => handleLayerChange(idx)}
-                  />
-                </div>
-                {l.source && l.source.label && l.source.url && (
-                  <div className='form__help'>
-                    <p>
-                      Source:{' '}
-                      <a target='_blank' href={l.source.url} title='View'>
-                        {l.source.label}
-                      </a>
-                    </p>
+          <div className='drop_content'>
+            <h6 className='drop__title'><Trans>Layers Control</Trans></h6>
+            <ul className='layers-list'>
+              {layersConfig.map((l, idx) => (
+                <li className='layers-list__item' key={l.id}>
+                  <div className='form__group'>
+                    <Toggle
+                      text={i18n.t(l.label)}
+                      name={`switch-${l.id}`}
+                      title='Toggle on/off'
+                      checked={layersState[idx]}
+                      onChange={() => handleLayerChange(idx)}
+                    />
                   </div>
-                )}
-              </li>
-            ))}
-          </ul>
+                  <div className='form__group'>
+                    <Transparency
+                      text={i18n.t(l.label)}
+                      name={`transparency-${l.id}`}
+                      title='Change transparency'
+                      value={layersTransparency[idx]}
+                      onChange={(event) => handleLayerTransparencyChange(idx, event.target.value)}
+                    />
+                  </div>
+                  {l.source && l.source.label && l.source.url && (
+                    <div className='form__help'>
+                      <p>
+                        Source:{' '}
+                        <a target='_blank' href={l.source.url} title='View'>
+                          {l.source.label}
+                        </a>
+                      </p>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </ShadowScrollbars>
       </Dropdown>
     );
@@ -63,7 +74,9 @@ if (environment !== 'production') {
   LayerControlDropdown.propTypes = {
     layersConfig: T.array,
     layersState: T.array,
-    handleLayerChange: T.func
+    handleLayerChange: T.func,
+    layersTransparency: T.array,
+    handleLayerTransparencyChange: T.func,
   };
 }
 
@@ -89,9 +102,36 @@ const Toggle = props => {
     </label>
   );
 };
+const Transparency = props => {
+  const { text, name, title, value, onChange } = props;
+
+  return (
+    <div
+      className='form__option__transparency'
+      title={title}
+    >
+      <span><Trans>Transparency</Trans></span>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value={value}
+        step="1"
+        onChange={onChange}
+      />
+    </div>
+  );
+};
 
 if (environment !== 'production') {
   Toggle.propTypes = {
+    text: T.string,
+    name: T.string,
+    title: T.string,
+    checked: T.bool,
+    onChange: T.func
+  };
+  Transparency.propTypes = {
     text: T.string,
     name: T.string,
     title: T.string,
