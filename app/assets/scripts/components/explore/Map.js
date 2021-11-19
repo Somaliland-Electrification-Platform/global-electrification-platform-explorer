@@ -6,7 +6,7 @@ import bbox from '@turf/bbox';
 import { PropTypes as T } from 'prop-types';
 
 import MapPopover from './connected/MapPopover';
-import { mapboxAccessToken, environment, basemapStyleLink } from '../../config';
+import { mapboxAccessToken, environment, basemapStyleLink, clusterSourceName, clusterLayerUrl } from '../../config';
 import MapboxControl from '../MapboxReactControl';
 import LayerControlDropdown from './MapLayerControl';
 import MapLayerLegend from './MapLayerLegend';
@@ -164,10 +164,10 @@ class Map extends React.Component {
 
       this.toggleExternalLayers();
 
-      const sourceLayer = 'Somaliland_WBPopulation_clusters_clipped';
+      const sourceLayer = clusterSourceName;
       this.map.addSource(gepFeaturesSourceId, {
         type: 'vector',
-        tiles: ['https://somaliland.gep.kartoza.com/geoserver/gwc/service/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&LAYER=geonode:Somaliland_WBPopulation_clusters_clipped&STYLE=&TILEMATRIX=EPSG:3857:{z}&TILEMATRIXSET=EPSG:3857&FORMAT=application/vnd.mapbox-vector-tile&TILECOL={x}&TILEROW={y}']
+        tiles: [clusterLayerUrl]
       });
 
       // Init cluster polygon layers

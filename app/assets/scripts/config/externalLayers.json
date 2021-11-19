@@ -44,5 +44,41 @@
     ],
     "description": "",
     "source": {}
+  },
+  {
+    "id": "somalia_interconnection",
+    "label": "Somalia Interconnection",
+    "type": "raster",
+    "layerType": "overlay",
+    "visibleByDefault": false,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:somalia_interconnection&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=512&HEIGHT=512&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
+  },
+  {
+    "id": "ethiopia_somalia_interconnection",
+    "label": "Ethiopia-Somalia Interconnection",
+    "type": "raster",
+    "layerType": "overlay",
+    "visibleByDefault": false,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:ethiopia_somalia_interconnection&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=512&HEIGHT=512&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
+  },
+  {
+    "id": "ethiopia_interconnection",
+    "label": "Ethiopia Interconnection",
+    "type": "raster",
+    "layerType": "overlay",
+    "visibleByDefault": false,
+    "tiles": [
+      "https://somaliland.gep.kartoza.com/geoserver/geonode/wms?access_token=2bZH3FhiDxTRAa6aarjvHGeKgm4bN7&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&ACCESS_TOKEN=5PEx2Kx4loJBneavCXf1zX9ZUdnLF0&LAYERS=geonode:ethiopia_interconnection&exceptions=application%2Fvnd.ogc.se_inimage&SRS=EPSG:3857&WIDTH=512&HEIGHT=512&bbox={bbox-epsg-3857}"
+    ],
+    "description": "",
+    "source": {}
   }
 ]
