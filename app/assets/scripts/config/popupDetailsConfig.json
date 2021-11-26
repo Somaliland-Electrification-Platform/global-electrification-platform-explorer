@@ -8,6 +8,16 @@
     "field": "Buildings"
   },
   {
+    "label": "Total investment required",
+    "field": "totalInvestmentCost",
+    "prefix": "$ "
+  },
+  {
+    "label": "Total new capacity",
+    "field": "totalNewCapacity",
+    "keyIndicator": "power"
+  },
+  {
     "label": "Investment required in timestep",
     "field": "investmentCost",
     "prefix": "$ "
